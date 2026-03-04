@@ -1,0 +1,27 @@
+[Resume Summary]
+Designed and implemented a full-stack RESTful backend for FoodieHub using Spring Boot and JPA, featuring complex ordering logic, menu management with S3 image integration, and robust DTO-driven data layers.
+
+[Talking Points]
+- Completed the implementation of REST controllers for Menu, Order, Customer, Supplier, Inventory, Purchase Orders, and Admin modules, following industry-standard resource naming and HTTP method conventions.
+- Implemented core business logic in the service layer, including transactional order processing, automated inventory stock updates on reception of purchase orders, and snapshot pricing.
+- Leveraged ModelMapper to maintain a clean separation between database entities and API request/response DTOs for over 20+ distinct resources.
+- Added comprehensive input validation using Jakarta Validation annotations to ensure data consistency before processing at the controller level.
+- Integrated a global exception handling mechanism to provide standardized, meaningful JSON error responses for common failures like "Entity Not Found".
+- Implemented specialized features like menu status tracking, availability-based filtering, and dynamic discount calculations.
+- Ensured the codebase remains scalable and maintainable for early-career developers by using idiomatic Spring Boot patterns and clear documentation.
+
+[Project Introduction Script]
+"FoodieHub is a comprehensive restaurant ordering backend I worked on to solidify my backend engineering skills. My primary contributions focused on completing the core controllers and business services for menu and order management. I specialized in building the data flow from DTOs to JPA entities, ensuring strict validation and proper exception handling throughout the stack. While I didn't implement the security layer or live AWS keys, the architecture is ready for those integrations and follows REST best practices for a production-ready application."
+
+[Interview Q&A]
+Q: "How did you structure controllers and services?"
+A: I followed the standard 3-layer architecture: Controllers handle HTTP requests and validation, Services contain the business logic and orchestrate data flow, and Repositories handle database persistence via Spring Data JPA. This separation of concerns ensures that the business logic is decoupled from both the API and the database.
+
+Q: "How did you handle validation and errors?"
+A: I used '@Valid' and Jakarta Validation annotations on DTOs to catch invalid data early at the controller level. For errors, I implemented a '@RestControllerAdvice' class to globally catch custom exceptions and return consistent error messages with appropriate HTTP status codes.
+
+Q: "How would you add authentication later?"
+A: I would integrate Spring Security to handle JWT or Session-based authentication. This would involve adding a filter chain to secure endpoints, creating a UserDetails service, and ensuring that sensitive operations like order deletion are restricted to authorized users only.
+
+Q: "How did you test your code?"
+A: I focused on ensuring the build process was successful and verifying the logic through manual API walkthroughs using tools like Postman. I also ensured that custom methods in my repositories were correctly derived from Spring Data JPA naming conventions for reliable data retrieval.

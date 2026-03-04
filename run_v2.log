@@ -1,0 +1,75 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.superBoy:FoodieHub >-----------------------
+[INFO] Building FoodieHub 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.2:run (default-cli) > test-compile @ FoodieHub >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ FoodieHub ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ FoodieHub ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 81 source files with javac [debug parameters release 17] to target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/Orders.java:[235,24] cannot find symbol
+  symbol:   variable menuItems
+  location: class com.superBoy.FoodieHub.Model.Orders
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/Orders.java:[239,21] cannot find symbol
+  symbol: variable menuItems
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/Menu.java:[226,24] cannot find symbol
+  symbol:   variable orders
+  location: class com.superBoy.FoodieHub.Model.Menu
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/Menu.java:[230,21] cannot find symbol
+  symbol: variable orders
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/Inventory.java:[118,24] cannot find symbol
+  symbol:   variable purchaseOrders
+  location: class com.superBoy.FoodieHub.Model.Inventory
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/Inventory.java:[122,21] cannot find symbol
+  symbol: variable purchaseOrders
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/PurchaseOrder.java:[119,24] cannot find symbol
+  symbol:   variable inventoryItems
+  location: class com.superBoy.FoodieHub.Model.PurchaseOrder
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/PurchaseOrder.java:[123,21] cannot find symbol
+  symbol: variable inventoryItems
+[INFO] 8 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.891 s
+[INFO] Finished at: 2026-02-21T02:09:22+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:compile (default-compile) on project FoodieHub: Compilation failure: Compilation failure: 
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/Orders.java:[235,24] cannot find symbol
+[ERROR]   symbol:   variable menuItems
+[ERROR]   location: class com.superBoy.FoodieHub.Model.Orders
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/Orders.java:[239,21] cannot find symbol
+[ERROR]   symbol: variable menuItems
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/Menu.java:[226,24] cannot find symbol
+[ERROR]   symbol:   variable orders
+[ERROR]   location: class com.superBoy.FoodieHub.Model.Menu
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/Menu.java:[230,21] cannot find symbol
+[ERROR]   symbol: variable orders
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/Inventory.java:[118,24] cannot find symbol
+[ERROR]   symbol:   variable purchaseOrders
+[ERROR]   location: class com.superBoy.FoodieHub.Model.Inventory
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/Inventory.java:[122,21] cannot find symbol
+[ERROR]   symbol: variable purchaseOrders
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/PurchaseOrder.java:[119,24] cannot find symbol
+[ERROR]   symbol:   variable inventoryItems
+[ERROR]   location: class com.superBoy.FoodieHub.Model.PurchaseOrder
+[ERROR] /C:/FoodieHub/src/main/java/com/superBoy/FoodieHub/Model/PurchaseOrder.java:[123,21] cannot find symbol
+[ERROR]   symbol: variable inventoryItems
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

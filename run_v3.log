@@ -1,0 +1,1456 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.superBoy:FoodieHub >-----------------------
+[INFO] Building FoodieHub 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.2:run (default-cli) > test-compile @ FoodieHub >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ FoodieHub ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ FoodieHub ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 81 source files with javac [debug parameters release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ FoodieHub ---
+[INFO] skip non existing resourceDirectory C:\FoodieHub\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ FoodieHub ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] <<< spring-boot:4.0.2:run (default-cli) < test-compile @ FoodieHub <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.2:run (default-cli) @ FoodieHub ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+[32m :: Spring Boot :: [39m              [2m (v4.0.2)[0;39m
+
+[2m2026-02-21T02:10:03.183+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mc.s.FoodieHub.FoodieHubApplication      [0;39m [2m:[0;39m Starting FoodieHubApplication using Java 21.0.3 with PID 28808 (C:\FoodieHub\target\classes started by vinay in C:\FoodieHub)
+[2m2026-02-21T02:10:03.186+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mc.s.FoodieHub.FoodieHubApplication      [0;39m [2m:[0;39m No active profile set, falling back to 1 default profile: "default"
+[2m2026-02-21T02:10:03.258+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2m2026-02-21T02:10:03.258+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2m2026-02-21T02:10:04.101+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2m2026-02-21T02:10:04.278+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 162 ms. Found 14 JPA repository interfaces.
+[2m2026-02-21T02:10:05.033+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.s.boot.tomcat.TomcatWebServer         [0;39m [2m:[0;39m Tomcat initialized with port 5050 (http)
+[2m2026-02-21T02:10:05.053+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2026-02-21T02:10:05.054+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.apache.catalina.core.StandardEngine   [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/11.0.15]
+[2m2026-02-21T02:10:05.114+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mb.w.c.s.WebApplicationContextInitializer[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1854 ms
+[2m2026-02-21T02:10:05.312+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36morg.hibernate.orm.jpa                   [0;39m [2m:[0;39m HHH008540: Processing PersistenceUnitInfo [name: default]
+[2m2026-02-21T02:10:05.404+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36morg.hibernate.orm.core                  [0;39m [2m:[0;39m HHH000001: Hibernate ORM core version 7.2.1.Final
+[2m2026-02-21T02:10:06.066+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.s.o.j.p.SpringPersistenceUnitInfo     [0;39m [2m:[0;39m No LoadTimeWeaver setup: ignoring JPA class transformer
+[2m2026-02-21T02:10:06.109+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Starting...
+[2m2026-02-21T02:10:06.677+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76911bec
+[2m2026-02-21T02:10:06.679+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Start completed.
+[2m2026-02-21T02:10:06.822+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36morg.hibernate.orm.connections.pooling   [0;39m [2m:[0;39m HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/foodHub]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.41
+	Default catalog/schema: foodHub/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2m2026-02-21T02:10:08.300+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36morg.hibernate.orm.core                  [0;39m [2m:[0;39m HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    alter table customer_payment 
+       drop 
+       foreign key FKj2oc6atfed430p54cpxeswcun
+[2m2026-02-21T02:10:08.837+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table customer_payment 
+       drop 
+       foreign key FKj2oc6atfed430p54cpxeswcun" via JDBC [Table 'foodhub.customer_payment' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table customer_payment 
+       drop 
+       foreign key FKj2oc6atfed430p54cpxeswcun" via JDBC [Table 'foodhub.customer_payment' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.customer_payment' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    alter table customer_payment 
+       drop 
+       foreign key FK84y6myjk6kl2l5oi1lhx3noh
+[2m2026-02-21T02:10:08.846+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table customer_payment 
+       drop 
+       foreign key FK84y6myjk6kl2l5oi1lhx3noh" via JDBC [Table 'foodhub.customer_payment' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table customer_payment 
+       drop 
+       foreign key FK84y6myjk6kl2l5oi1lhx3noh" via JDBC [Table 'foodhub.customer_payment' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.customer_payment' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    alter table customer_address 
+       drop 
+       foreign key FKr9ofa0ydsgbaqmt9leb3v5eii
+[2m2026-02-21T02:10:08.851+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table customer_address 
+       drop 
+       foreign key FKr9ofa0ydsgbaqmt9leb3v5eii" via JDBC [Table 'foodhub.customer_address' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table customer_address 
+       drop 
+       foreign key FKr9ofa0ydsgbaqmt9leb3v5eii" via JDBC [Table 'foodhub.customer_address' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.customer_address' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    alter table menu 
+       drop 
+       foreign key FKww84tou7nixng06lmxawvcre
+[2m2026-02-21T02:10:08.858+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table menu 
+       drop 
+       foreign key FKww84tou7nixng06lmxawvcre" via JDBC [Table 'foodhub.menu' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table menu 
+       drop 
+       foreign key FKww84tou7nixng06lmxawvcre" via JDBC [Table 'foodhub.menu' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.menu' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    alter table menu_inventory 
+       drop 
+       foreign key FK427uy0mqbv5ikuv2c6048ubbn
+[2m2026-02-21T02:10:08.861+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table menu_inventory 
+       drop 
+       foreign key FK427uy0mqbv5ikuv2c6048ubbn" via JDBC [Table 'foodhub.menu_inventory' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table menu_inventory 
+       drop 
+       foreign key FK427uy0mqbv5ikuv2c6048ubbn" via JDBC [Table 'foodhub.menu_inventory' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.menu_inventory' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    alter table menu_inventory 
+       drop 
+       foreign key FKfyv1a5xt7hu0nbvs8hr00w0tm
+[2m2026-02-21T02:10:08.865+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table menu_inventory 
+       drop 
+       foreign key FKfyv1a5xt7hu0nbvs8hr00w0tm" via JDBC [Table 'foodhub.menu_inventory' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table menu_inventory 
+       drop 
+       foreign key FKfyv1a5xt7hu0nbvs8hr00w0tm" via JDBC [Table 'foodhub.menu_inventory' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.menu_inventory' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    alter table order_item 
+       drop 
+       foreign key FKi610j9rwndv2jcwrgyo89q2es
+[2m2026-02-21T02:10:08.871+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table order_item 
+       drop 
+       foreign key FKi610j9rwndv2jcwrgyo89q2es" via JDBC [Table 'foodhub.order_item' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table order_item 
+       drop 
+       foreign key FKi610j9rwndv2jcwrgyo89q2es" via JDBC [Table 'foodhub.order_item' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.order_item' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    alter table order_item 
+       drop 
+       foreign key FKt4dc2r9nbvbujrljv3e23iibt
+[2m2026-02-21T02:10:08.875+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table order_item 
+       drop 
+       foreign key FKt4dc2r9nbvbujrljv3e23iibt" via JDBC [Table 'foodhub.order_item' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table order_item 
+       drop 
+       foreign key FKt4dc2r9nbvbujrljv3e23iibt" via JDBC [Table 'foodhub.order_item' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.order_item' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    alter table orders 
+       drop 
+       foreign key FK624gtjin3po807j3vix093tlf
+[2m2026-02-21T02:10:08.880+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table orders 
+       drop 
+       foreign key FK624gtjin3po807j3vix093tlf" via JDBC [Table 'foodhub.orders' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table orders 
+       drop 
+       foreign key FK624gtjin3po807j3vix093tlf" via JDBC [Table 'foodhub.orders' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.orders' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    alter table orders 
+       drop 
+       foreign key FKn7t79lo3ed6ebviyeux4vu1dh
+[2m2026-02-21T02:10:08.883+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table orders 
+       drop 
+       foreign key FKn7t79lo3ed6ebviyeux4vu1dh" via JDBC [Table 'foodhub.orders' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table orders 
+       drop 
+       foreign key FKn7t79lo3ed6ebviyeux4vu1dh" via JDBC [Table 'foodhub.orders' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.orders' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    alter table purchase_item 
+       drop 
+       foreign key FK6sgpehrv76wkxqcaw9ptna464
+[2m2026-02-21T02:10:08.887+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table purchase_item 
+       drop 
+       foreign key FK6sgpehrv76wkxqcaw9ptna464" via JDBC [Table 'foodhub.purchase_item' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table purchase_item 
+       drop 
+       foreign key FK6sgpehrv76wkxqcaw9ptna464" via JDBC [Table 'foodhub.purchase_item' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.purchase_item' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    alter table purchase_item 
+       drop 
+       foreign key FK5ou7yc7pclccvdw20wbmljkil
+[2m2026-02-21T02:10:08.892+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table purchase_item 
+       drop 
+       foreign key FK5ou7yc7pclccvdw20wbmljkil" via JDBC [Table 'foodhub.purchase_item' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table purchase_item 
+       drop 
+       foreign key FK5ou7yc7pclccvdw20wbmljkil" via JDBC [Table 'foodhub.purchase_item' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.purchase_item' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    alter table purchase_order 
+       drop 
+       foreign key FK4traogu3jriq9u7e8rvm86k7i
+[2m2026-02-21T02:10:08.896+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table purchase_order 
+       drop 
+       foreign key FK4traogu3jriq9u7e8rvm86k7i" via JDBC [Table 'foodhub.purchase_order' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table purchase_order 
+       drop 
+       foreign key FK4traogu3jriq9u7e8rvm86k7i" via JDBC [Table 'foodhub.purchase_order' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.purchase_order' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    alter table supplier_address 
+       drop 
+       foreign key FKr9dtkjlmnsmxxnd1hl8r8lpi6
+[2m2026-02-21T02:10:08.898+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table supplier_address 
+       drop 
+       foreign key FKr9dtkjlmnsmxxnd1hl8r8lpi6" via JDBC [Table 'foodhub.supplier_address' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table supplier_address 
+       drop 
+       foreign key FKr9dtkjlmnsmxxnd1hl8r8lpi6" via JDBC [Table 'foodhub.supplier_address' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.supplier_address' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    alter table supplier_payment 
+       drop 
+       foreign key FKrppuftbiheqgrsmesx2f5p285
+[2m2026-02-21T02:10:08.903+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table supplier_payment 
+       drop 
+       foreign key FKrppuftbiheqgrsmesx2f5p285" via JDBC [Table 'foodhub.supplier_payment' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table supplier_payment 
+       drop 
+       foreign key FKrppuftbiheqgrsmesx2f5p285" via JDBC [Table 'foodhub.supplier_payment' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.supplier_payment' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    alter table supplier_payment 
+       drop 
+       foreign key FKqy7og5c3psvi8j5yn2lmrki7x
+[2m2026-02-21T02:10:08.914+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.h.t.s.i.ExceptionHandlerLoggedImpl    [0;39m [2m:[0;39m GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table supplier_payment 
+       drop 
+       foreign key FKqy7og5c3psvi8j5yn2lmrki7x" via JDBC [Table 'foodhub.supplier_payment' doesn't exist]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table supplier_payment 
+       drop 
+       foreign key FKqy7og5c3psvi8j5yn2lmrki7x" via JDBC [Table 'foodhub.supplier_payment' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.3.jar:7.0.3]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.2.jar:4.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.2.jar:4.0.2]
+	at com.superBoy.FoodieHub.FoodieHubApplication.main(FoodieHubApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.2.jar:4.0.2]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'foodhub.supplier_payment' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.5.0.jar:9.5.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76) ~[hibernate-core-7.2.1.Final.jar:7.2.1.Final]
+	... 43 common frames omitted
+
+Hibernate: 
+    drop table if exists admin
+Hibernate: 
+    drop table if exists category
+Hibernate: 
+    drop table if exists customer
+Hibernate: 
+    drop table if exists customer_payment
+Hibernate: 
+    drop table if exists customer_address
+Hibernate: 
+    drop table if exists inventory
+Hibernate: 
+    drop table if exists menu
+Hibernate: 
+    drop table if exists menu_inventory
+Hibernate: 
+    drop table if exists order_item
+Hibernate: 
+    drop table if exists orders
+Hibernate: 
+    drop table if exists purchase_item
+Hibernate: 
+    drop table if exists purchase_order
+Hibernate: 
+    drop table if exists supplier
+Hibernate: 
+    drop table if exists supplier_address
+Hibernate: 
+    drop table if exists supplier_payment
+Hibernate: 
+    create table admin (
+        role tinyint check ((role between 0 and 2)),
+        admin_id bigint not null auto_increment,
+        created_at datetime(6),
+        email varchar(255) not null,
+        name varchar(255) not null,
+        phone varchar(255),
+        primary key (admin_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table category (
+        category_staus tinyint not null check ((category_staus between 0 and 1)),
+        display_order integer,
+        category_id bigint not null auto_increment,
+        category_name varchar(100) not null,
+        description TEXT,
+        image_url varchar(255),
+        primary key (category_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table customer (
+        gender tinyint check ((gender between 0 and 2)),
+        is_active bit not null,
+        loyalty_points integer not null,
+        created_at datetime(6),
+        customer_id bigint not null auto_increment,
+        date_of_birth datetime(6),
+        last_login datetime(6),
+        updated_at datetime(6),
+        email varchar(255) not null,
+        name varchar(255) not null,
+        password varchar(255),
+        phone varchar(255) not null,
+        primary key (customer_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table customer_payment (
+        amount decimal(38,2),
+        payment_method tinyint check ((payment_method between 0 and 4)),
+        payment_status tinyint check ((payment_status between 0 and 3)),
+        customer_id bigint not null,
+        order_id bigint not null,
+        payment_date datetime(6),
+        payment_id bigint not null auto_increment,
+        transaction_id varchar(255),
+        primary key (payment_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table customer_address (
+        address_type tinyint not null check ((address_type between 0 and 2)),
+        address_id bigint not null auto_increment,
+        customer_id bigint not null,
+        city varchar(255) not null,
+        state varchar(255) not null,
+        street varchar(255) not null,
+        zip_code varchar(255) not null,
+        primary key (address_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table inventory (
+        current_stock integer,
+        min_stock integer,
+        inventory_id bigint not null auto_increment,
+        last_updated datetime(6),
+        city varchar(255),
+        item_name varchar(255) not null,
+        state varchar(255),
+        unit varchar(255),
+        primary key (inventory_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table menu (
+        calories integer,
+        discount_percent decimal(38,2),
+        discounted_price decimal(38,2),
+        is_available tinyint not null check ((is_available between 0 and 1)),
+        is_veg bit not null,
+        menu_id integer not null auto_increment,
+        price decimal(38,2) not null,
+        rating float(53),
+        serves integer,
+        total_ratings integer,
+        category_id bigint not null,
+        created_at datetime(6),
+        updated_at datetime(6),
+        description varchar(255),
+        image_url varchar(255),
+        item_name varchar(255),
+        primary key (menu_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table menu_inventory (
+        menu_id integer not null,
+        inventory_id bigint not null
+    ) engine=InnoDB
+Hibernate: 
+    create table order_item (
+        menu_id integer not null,
+        quantity integer,
+        subtotal decimal(38,2),
+        unit_price decimal(38,2),
+        order_id bigint not null,
+        order_item_id bigint not null auto_increment,
+        primary key (order_item_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table orders (
+        delivery_charge decimal(38,2),
+        discount_amount decimal(38,2),
+        final_amount decimal(38,2),
+        loyalty_points_used integer,
+        order_status tinyint not null check ((order_status between 0 and 5)),
+        order_type tinyint not null check ((order_type between 0 and 2)),
+        tax_amount decimal(38,2),
+        total_amount decimal(38,2),
+        customer_address_id bigint,
+        customer_id bigint not null,
+        order_date datetime(6),
+        order_id bigint not null auto_increment,
+        updated_at datetime(6),
+        cancellation_reason varchar(255),
+        coupon_code varchar(255),
+        special_instructions TEXT,
+        table_number varchar(255),
+        primary key (order_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table purchase_item (
+        quantity integer,
+        total_price decimal(38,2),
+        unit_price decimal(38,2),
+        inventory_id bigint not null,
+        purchase_item_id bigint not null auto_increment,
+        purchase_order_id bigint not null,
+        primary key (purchase_item_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table purchase_order (
+        status tinyint check ((status between 0 and 2)),
+        total_amount decimal(38,2),
+        delivery_date datetime(6),
+        order_date datetime(6),
+        purchase_order_id bigint not null auto_increment,
+        supplier_id bigint not null,
+        primary key (purchase_order_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table supplier (
+        created_at datetime(6),
+        supplier_id bigint not null auto_increment,
+        contact_person varchar(255),
+        email varchar(255),
+        phone varchar(255),
+        supplier_name varchar(255) not null,
+        primary key (supplier_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table supplier_address (
+        address_id bigint not null auto_increment,
+        supplier_id bigint not null,
+        city varchar(255),
+        state varchar(255),
+        street varchar(255),
+        zip_code varchar(255),
+        primary key (address_id)
+    ) engine=InnoDB
+Hibernate: 
+    create table supplier_payment (
+        amount decimal(38,2),
+        payment_method tinyint check ((payment_method between 0 and 2)),
+        payment_status tinyint check ((payment_status between 0 and 3)),
+        payment_date datetime(6),
+        payment_id bigint not null auto_increment,
+        purchase_order_id bigint not null,
+        supplier_id bigint not null,
+        transaction_id varchar(255),
+        primary key (payment_id)
+    ) engine=InnoDB
+Hibernate: 
+    alter table admin 
+       add constraint UKc0r9atamxvbhjjvy5j8da1kam unique (email)
+Hibernate: 
+    alter table category 
+       add constraint UKlroeo5fvfdeg4hpicn4lw7x9b unique (category_name)
+Hibernate: 
+    alter table customer 
+       add constraint UKdwk6cx0afu8bs9o4t536v1j5v unique (email)
+Hibernate: 
+    alter table supplier 
+       add constraint UKg7qiwwu4vpciysmeeyme9gg1d unique (email)
+Hibernate: 
+    alter table customer_payment 
+       add constraint FKj2oc6atfed430p54cpxeswcun 
+       foreign key (customer_id) 
+       references customer (customer_id)
+Hibernate: 
+    alter table customer_payment 
+       add constraint FK84y6myjk6kl2l5oi1lhx3noh 
+       foreign key (order_id) 
+       references orders (order_id)
+Hibernate: 
+    alter table customer_address 
+       add constraint FKr9ofa0ydsgbaqmt9leb3v5eii 
+       foreign key (customer_id) 
+       references customer (customer_id)
+Hibernate: 
+    alter table menu 
+       add constraint FKww84tou7nixng06lmxawvcre 
+       foreign key (category_id) 
+       references category (category_id)
+Hibernate: 
+    alter table menu_inventory 
+       add constraint FK427uy0mqbv5ikuv2c6048ubbn 
+       foreign key (inventory_id) 
+       references inventory (inventory_id)
+Hibernate: 
+    alter table menu_inventory 
+       add constraint FKfyv1a5xt7hu0nbvs8hr00w0tm 
+       foreign key (menu_id) 
+       references menu (menu_id)
+Hibernate: 
+    alter table order_item 
+       add constraint FKi610j9rwndv2jcwrgyo89q2es 
+       foreign key (menu_id) 
+       references menu (menu_id)
+Hibernate: 
+    alter table order_item 
+       add constraint FKt4dc2r9nbvbujrljv3e23iibt 
+       foreign key (order_id) 
+       references orders (order_id)
+Hibernate: 
+    alter table orders 
+       add constraint FK624gtjin3po807j3vix093tlf 
+       foreign key (customer_id) 
+       references customer (customer_id)
+Hibernate: 
+    alter table orders 
+       add constraint FKn7t79lo3ed6ebviyeux4vu1dh 
+       foreign key (customer_address_id) 
+       references customer_address (address_id)
+Hibernate: 
+    alter table purchase_item 
+       add constraint FK6sgpehrv76wkxqcaw9ptna464 
+       foreign key (inventory_id) 
+       references inventory (inventory_id)
+Hibernate: 
+    alter table purchase_item 
+       add constraint FK5ou7yc7pclccvdw20wbmljkil 
+       foreign key (purchase_order_id) 
+       references purchase_order (purchase_order_id)
+Hibernate: 
+    alter table purchase_order 
+       add constraint FK4traogu3jriq9u7e8rvm86k7i 
+       foreign key (supplier_id) 
+       references supplier (supplier_id)
+Hibernate: 
+    alter table supplier_address 
+       add constraint FKr9dtkjlmnsmxxnd1hl8r8lpi6 
+       foreign key (supplier_id) 
+       references supplier (supplier_id)
+Hibernate: 
+    alter table supplier_payment 
+       add constraint FKrppuftbiheqgrsmesx2f5p285 
+       foreign key (purchase_order_id) 
+       references purchase_order (purchase_order_id)
+Hibernate: 
+    alter table supplier_payment 
+       add constraint FKqy7og5c3psvi8j5yn2lmrki7x 
+       foreign key (supplier_id) 
+       references supplier (supplier_id)
+[2m2026-02-21T02:10:11.381+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2m2026-02-21T02:10:11.496+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.s.d.j.r.query.QueryEnhancerFactories  [0;39m [2m:[0;39m Hibernate is in classpath; If applicable, HQL parser will be used.
+[2m2026-02-21T02:10:11.734+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mJpaBaseConfiguration$JpaWebConfiguration[0;39m [2m:[0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2m2026-02-21T02:10:12.249+05:30[0;39m [33m WARN[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36m.s.a.UserDetailsServiceAutoConfiguration[0;39m [2m:[0;39m 
+
+Using generated security password: 68c1cd56-66a7-4e1f-b8e8-ec46a52c9058
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2m2026-02-21T02:10:12.308+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mr$InitializeUserDetailsManagerConfigurer[0;39m [2m:[0;39m Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2m2026-02-21T02:10:12.544+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mo.s.boot.tomcat.TomcatWebServer         [0;39m [2m:[0;39m Tomcat started on port 5050 (http) with context path '/cafeApp'
+[2m2026-02-21T02:10:12.549+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [  restartedMain] [0;39m[36mc.s.FoodieHub.FoodieHubApplication      [0;39m [2m:[0;39m Started FoodieHubApplication in 9.908 seconds (process running for 10.566)
+[2m2026-02-21T02:15:13.411+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [nio-5050-exec-2] [0;39m[36mo.a.c.c.C.[.[localhost].[/cafeApp]      [0;39m [2m:[0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2m2026-02-21T02:15:13.426+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [nio-5050-exec-2] [0;39m[36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2026-02-21T02:15:13.571+05:30[0;39m [32m INFO[0;39m [35m28808[0;39m [2m--- [FoodieHub] [nio-5050-exec-2] [0;39m[36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 143 ms

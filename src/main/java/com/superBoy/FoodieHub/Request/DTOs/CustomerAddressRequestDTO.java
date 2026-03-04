@@ -1,0 +1,81 @@
+package com.superBoy.FoodieHub.Request.DTOs;
+
+import com.superBoy.FoodieHub.Enums.CustomerAddressType;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+
+public class CustomerAddressRequestDTO {
+
+	private Long customerId;
+
+	@NotBlank(message = "Street is required")
+	@Size(max = 255, message = "Street must not exceed 255 characters")
+	private String street;
+
+	@NotBlank(message = "City is required")
+	@Size(max = 100, message = "City must not exceed 100 characters")
+	private String city;
+
+	@NotBlank(message = "State is required")
+	@Size(max = 100, message = "State must not exceed 100 characters")
+	private String state;
+
+	@NotBlank(message = "Zip code is required")
+	@Pattern(regexp = "^[0-9]{6}$", message = "Zip code must be 6 digits")
+	private String zipCode;
+
+	@NotNull
+	private CustomerAddressType  addressType;
+
+	public Long getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(Long customerId) {
+		this.customerId = customerId;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getZipCode() {
+		return zipCode;
+	}
+
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
+	}
+
+	public CustomerAddressType  getAddressType() {
+		return addressType;
+	}
+
+	public void setAddressType(CustomerAddressType  addressType) {
+		this.addressType = addressType;
+	}
+
+}

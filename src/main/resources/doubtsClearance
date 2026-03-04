@@ -1,0 +1,86 @@
+Derived method ALWAYS:
+
+		Starts from repository entity
+		Navigates through object relationships
+		Matches field names exactly
+		Returns type of repository entity
+		
+You Must Learned
+
+		Difference between:
+		map(dto, Category.class)   ❌ (creates new)
+		map(dto, existingEntity)   ✅ (updates)
+		
+		**Final relationship structure is now clean:**
+```
+Orders
+  │
+  │ @OneToMany
+  ▼
+OrderItem  ──── @ManyToOne ────▶  Menu
+  │
+  │ @ManyToOne
+  ▼
+Orders
+
+
+Menu ──── @ManyToMany ────▶ Inventory
+         (MENU_INVENTORY)
+         no extra columns
+         so ManyToMany is fine here 
+         
+         
+         
+Think of it like a RESTAURANT BILL:
+MENU BOARD (Menu Entity)
+─────────────────────────
+Burger        ₹200
+  discount     10%
+  final price ₹180   ← what customer sees
+  
+Pizza         ₹300
+  discount     0%
+  final price ₹300
+CUSTOMER'S BILL (OrderItem Entity)
+─────────────────────────────────────
+Item        Qty   UnitPrice   Subtotal
+─────────────────────────────────────
+Burger       2     ₹180        ₹360   ← snapshot of menu price
+Pizza        1     ₹300        ₹300
+TOTAL BILL (Orders Entity)
+──────────────────────────
+totalAmount    = ₹660   ← sum of all subtotals
+discountAmount = ₹50    ← coupon code applied
+taxAmount      = ₹33    ← 5% GST
+deliveryCharge = ₹40    ← delivery fee
+──────────────────────────
+finalAmount    = ₹683   ← what customer pays
+
+Now why each price exists — simply:
+Menu prices:
+price           = ₹200   → original listed price
+discountPercent = 10%    → item level offer (today's special)
+discountedPrice = ₹180   → what customer sees on menu
+This is just the MENU BOARD — prices of dishes.
+
+OrderItem prices:
+unitPrice = ₹180   → SNAPSHOT of menu price at time of order
+quantity  = 2
+subtotal  = ₹360   → unitPrice × quantity
+This is ONE LINE IN THE BILL — e.g. "2 Burgers = ₹360"
+Why snapshot? Because:
+TODAY:    Burger = ₹180 → customer ordered → saved ₹180
+TOMORROW: Admin changes Burger = ₹250
+
+Old order still shows ₹180 ✅
+New order shows ₹250 ✅
+
+Orders prices:
+totalAmount    = ₹660  → add ALL orderItem subtotals
+discountAmount = ₹50   → coupon code discount (order level)
+taxAmount      = ₹33   → GST on whole bill
+deliveryCharge = ₹40   → delivery fee
+finalAmount    = ₹683  → final amount customer pays
+This is the COMPLETE BILL — total of everything.
+         
+         
