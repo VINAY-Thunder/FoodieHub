@@ -20,6 +20,7 @@ import com.superBoy.FoodieHub.I_Service.IcustomerService;
 import com.superBoy.FoodieHub.Request.DTOs.CustomerRequestDTO;
 import com.superBoy.FoodieHub.Response.DTOs.CustomerResponseDTO;
 import com.superBoy.FoodieHub.Update.CustomerUpdateDTO;
+import com.superBoy.FoodieHub.Update.CustomerUpdateRequestDTO;
 
 import jakarta.validation.Valid;
 
@@ -35,8 +36,8 @@ public class CustomerController {
 		this.customerService = customerService;
 	}
 
+	// Register Customer and Address
 	@PostMapping()
-//	@PostMapping("/registerCustomer")
 	public ResponseEntity<CustomerResponseDTO> registerCustomer(
 			@Valid @RequestBody CustomerRequestDTO customerRequestDTO) {
 
@@ -57,19 +58,18 @@ public class CustomerController {
 
 		List<CustomerResponseDTO> listcustomerresDto = customerService.fetchAllCustomers();
 		return new ResponseEntity<List<CustomerResponseDTO>>(listcustomerresDto, HttpStatus.OK);
-	}
+	}	
 
+	//Update customer
 	@PutMapping("/{customerId}")
-//	@PutMapping("/update/{customerId}")
-	public ResponseEntity<CustomerResponseDTO> updateCustomer(@Valid @RequestBody CustomerRequestDTO customerRequestDTO,
+	public ResponseEntity<CustomerResponseDTO> updateCustomer(@Valid @RequestBody CustomerUpdateRequestDTO customerUpdateRequestDTO,
 			@PathVariable Long customerId) throws CustomerNotFoundException {
 
-		CustomerResponseDTO customerresDto = customerService.updateCustomer(customerId, customerRequestDTO);
+		CustomerResponseDTO customerresDto = customerService.updateCustomer(customerId, customerUpdateRequestDTO);
 		return new ResponseEntity<CustomerResponseDTO>(customerresDto, HttpStatus.OK);
 	}
 
 	@PatchMapping("/{customerId}")
-	// @PatchMapping("/someupdate/{customerId}")
 	public ResponseEntity<CustomerResponseDTO> updateCustomer(@PathVariable Long customerId,
 			@Valid @RequestBody CustomerUpdateDTO customerUpdateDTO) throws CustomerNotFoundException {
 
@@ -78,7 +78,6 @@ public class CustomerController {
 	}
 
 	@DeleteMapping("/{customerId}")
-//	@DeleteMapping("/delete/{customerId}")
 	public ResponseEntity<String> deleteCustomer(@PathVariable Long customerId) throws CustomerNotFoundException {
 
 		String customerDto = customerService.deleteCustomerById(customerId);

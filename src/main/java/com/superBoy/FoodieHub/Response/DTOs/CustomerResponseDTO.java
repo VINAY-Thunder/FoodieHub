@@ -13,9 +13,9 @@ public class CustomerResponseDTO {
 	private String phone;
 	private LocalDateTime createdAt;
 	private LocalDate dateOfBirth;
-	private Integer loyaltyPoints;
 	private Boolean isActive;
 	private GenderIdentity gender;
+	private LocalDateTime updatedAt;
 	private List<CustomerAddressResponseDTO> addresses;
 
 	public List<CustomerAddressResponseDTO> getAddresses() {
@@ -40,14 +40,6 @@ public class CustomerResponseDTO {
 
 	public void setIsActive(Boolean isActive) {
 		this.isActive = isActive;
-	}
-
-	public Integer getLoyaltyPoints() {
-		return loyaltyPoints;
-	}
-
-	public void setLoyaltyPoints(Integer loyaltyPoints) {
-		this.loyaltyPoints = loyaltyPoints;
 	}
 
 	public Long getCustomerId() {
@@ -96,6 +88,14 @@ public class CustomerResponseDTO {
 
 	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
+	}
+
+	public LocalDateTime getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public void setUpdatedAt(LocalDateTime updatedAt) {
+		this.updatedAt = updatedAt;
 	}
 
 }

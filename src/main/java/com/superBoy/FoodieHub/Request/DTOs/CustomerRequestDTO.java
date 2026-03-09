@@ -33,25 +33,25 @@ public class CustomerRequestDTO {
 
 	private CustomerAddressRequestDTO address;
 
-	private OrderRequestDTO orderRequestDTO;
+//	private OrderRequestDTO orderRequestDTO;
 
-	private CustomerPaymentRequestDTO customerPaymentRequestDTO;
+//	private CustomerPaymentRequestDTO customerPaymentRequestDTO;
 
-	public CustomerPaymentRequestDTO getCustomerPaymentRequestDTO() {
-		return customerPaymentRequestDTO;
-	}
-
-	public void setCustomerPaymentRequestDTO(CustomerPaymentRequestDTO customerPaymentRequestDTO) {
-		this.customerPaymentRequestDTO = customerPaymentRequestDTO;
-	}
-
-	public OrderRequestDTO getOrderRequestDTO() {
-		return orderRequestDTO;
-	}
-
-	public void setOrderRequestDTO(OrderRequestDTO orderRequestDTO) {
-		this.orderRequestDTO = orderRequestDTO;
-	}
+//	public CustomerPaymentRequestDTO getCustomerPaymentRequestDTO() {
+//		return customerPaymentRequestDTO;
+//	}
+//
+//	public void setCustomerPaymentRequestDTO(CustomerPaymentRequestDTO customerPaymentRequestDTO) {
+//		this.customerPaymentRequestDTO = customerPaymentRequestDTO;
+//	}
+//
+//	public OrderRequestDTO getOrderRequestDTO() {
+//		return orderRequestDTO;
+//	}
+//
+//	public void setOrderRequestDTO(OrderRequestDTO orderRequestDTO) {
+//		this.orderRequestDTO = orderRequestDTO;
+//	}
 
 	public CustomerAddressRequestDTO getAddress() {
 		return address;

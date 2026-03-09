@@ -16,6 +16,7 @@ import com.superBoy.FoodieHub.Repository.CustomerRepository;
 import com.superBoy.FoodieHub.Request.DTOs.CustomerRequestDTO;
 import com.superBoy.FoodieHub.Response.DTOs.CustomerResponseDTO;
 import com.superBoy.FoodieHub.Update.CustomerUpdateDTO;
+import com.superBoy.FoodieHub.Update.CustomerUpdateRequestDTO;
 
 @Service
 public class CustomerService implements IcustomerService {
@@ -37,7 +38,6 @@ public class CustomerService implements IcustomerService {
 		Customer customerEntity = modelMapper.map(customerRequestDTO, Customer.class);
 		CustomerAddress CustomerAddressEntity;
 
-//		Customer customerEntity = customerrepo.save(customer);
 		customerrepo.save(customerEntity);
 		if (customerRequestDTO.getAddress() != null) {
 			// setingRelationShip for Address and customer
@@ -73,13 +73,13 @@ public class CustomerService implements IcustomerService {
 	}
 
 	@Override
-	public CustomerResponseDTO updateCustomer(Long customerID, CustomerRequestDTO customerRequestDTO)
+	public CustomerResponseDTO updateCustomer(Long customerID,CustomerUpdateRequestDTO customerUpdateRequestDTO)
 			throws CustomerNotFoundException {
 		Customer customerEntity;
 		Optional<Customer> optional = customerrepo.findById(customerID);
 		if (optional.isPresent()) {
 			customerEntity = optional.get();
-			modelMapper.map(customerRequestDTO, customerEntity);
+			modelMapper.map(customerUpdateRequestDTO, customerEntity);
 			customerrepo.save(customerEntity);
 		} else {
 			throw new CustomerNotFoundException("Customer not found with ID: " + customerID);
@@ -108,7 +108,7 @@ public class CustomerService implements IcustomerService {
 		Optional<Customer> optional = customerrepo.findById(customerID);
 		if (optional.isPresent()) {
 			customerrepo.deleteById(customerID);
-			return "Customer ID: " + customerID + "Succesfully Deleted";
+			return "Succesfully Deleted Customer ID: "+customerID;
 		}
 		throw new CustomerNotFoundException("Customer not found with ID: " + customerID);
 	}
