@@ -1,6 +1,8 @@
 package com.superBoy.FoodieHub.Response.DTOs;
 
+import java.math.BigDecimal;
 import java.util.List;
+
 import com.superBoy.FoodieHub.Enums.MenuStatus;
 
 public class MenuResponseDTO {
@@ -13,6 +15,8 @@ public class MenuResponseDTO {
 	private MenuStatus menuStatus;
 	private Boolean isVeg;
 	private String imageUrl;
+	private BigDecimal discountPercent; // show what discount was applied
+	private BigDecimal discountedPrice; // show final calculated price
 	private List<InventoryResponseDTO> inventoryItems;
 
 	public MenuResponseDTO() {
@@ -96,6 +100,22 @@ public class MenuResponseDTO {
 
 	public void setIsVeg(Boolean isVeg) {
 		this.isVeg = isVeg;
+	}
+
+	public BigDecimal getDiscountPercent() {
+		return discountPercent;
+	}
+
+	public void setDiscountPercent(BigDecimal discountPercent) {
+		this.discountPercent = discountPercent;
+	}
+
+	public BigDecimal getDiscountedPrice() {
+		return discountedPrice;
+	}
+
+	public void setDiscountedPrice(BigDecimal discountedPrice) {
+		this.discountedPrice = discountedPrice;
 	}
 
 }

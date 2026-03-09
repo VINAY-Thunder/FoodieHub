@@ -25,6 +25,8 @@ public class MenuRequestDTO {
 	@DecimalMin(value = "0.0", inclusive = false, message = "Price must be greater than 0")
 	private BigDecimal price;
 
+	private BigDecimal discountPercent; // user sends this (0-100)
+
 	private MultipartFile imageFile; // ADD THIS - actual image upload
 
 //	@NotNull(message = "Availability status is required")
@@ -113,6 +115,14 @@ public class MenuRequestDTO {
 
 	public void setIsVeg(Boolean isVeg) {
 		this.isVeg = isVeg;
+	}
+
+	public BigDecimal getDiscountPercent() {
+		return discountPercent;
+	}
+
+	public void setDiscountPercent(BigDecimal discountPercent) {
+		this.discountPercent = discountPercent;
 	}
 
 }

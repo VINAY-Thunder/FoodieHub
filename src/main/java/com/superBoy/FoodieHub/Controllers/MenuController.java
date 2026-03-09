@@ -51,7 +51,7 @@ public class MenuController {
 		return ResponseEntity.ok(menuService.getMenuItemsByCategory(categoryId));
 	}
 
-	// 5. UPDATE MENU ITEM
+	// 5. UPDATE MENU ITEM 
 	@PutMapping(value = "/{id}", consumes = "multipart/form-data")
 	public ResponseEntity<MenuResponseDTO> updateMenu(@PathVariable Long id,
 			@ModelAttribute @Valid MenuRequestDTO menuRequestDTO) {

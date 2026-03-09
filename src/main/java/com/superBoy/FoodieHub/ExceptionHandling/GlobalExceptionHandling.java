@@ -1,15 +1,11 @@
 package com.superBoy.FoodieHub.ExceptionHandling;
 
-import java.util.Arrays;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
-
-import com.superBoy.FoodieHub.Enums.MenuStatus;
 
 @RestControllerAdvice
 public class GlobalExceptionHandling {
@@ -80,4 +76,20 @@ public class GlobalExceptionHandling {
 	public ResponseEntity<String> handleInvalidOrder(InvalidOrderException e) {
 		return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
 	}
+
+	@ExceptionHandler(EmptyMenuListException.class)
+	public ResponseEntity<String> handleEmptyMenuList(EmptyMenuListException e) {
+		return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+	}
+
+	@ExceptionHandler(IllegalArgumentException.class)
+	public ResponseEntity<String> handleIllegalArgument(IllegalArgumentException e) {
+		return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+	}
+
+	@ExceptionHandler(InventoryNotFoundException.class)
+	public ResponseEntity<String> handleInventoryNotFound(InventoryNotFoundException e) {
+		return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_FOUND);
+	}
+	
 }

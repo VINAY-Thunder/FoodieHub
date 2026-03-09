@@ -12,7 +12,7 @@ public class InventoryResponseDTO {
 	private Integer minStock;
 	private String unit;
 	private LocalDateTime lastUpdated;
-	private List<MenuResponseDTO> menus;
+//	private List<MenuResponseDTO> menus;
 
 	public InventoryResponseDTO() {
 	}
@@ -81,12 +81,12 @@ public class InventoryResponseDTO {
 		this.lastUpdated = lastUpdated;
 	}
 
-	public List<MenuResponseDTO> getMenus() {
-		return menus;
-	}
-
-	public void setMenus(List<MenuResponseDTO> menus) {
-		this.menus = menus;
-	}
+//	public List<MenuResponseDTO> getMenus() {
+//		return menus;
+//	}
+//
+//	public void setMenus(List<MenuResponseDTO> menus) {
+//		this.menus = menus;
+//	}
 
 }
