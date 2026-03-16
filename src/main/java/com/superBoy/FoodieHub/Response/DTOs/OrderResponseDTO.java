@@ -8,7 +8,7 @@ public class OrderResponseDTO {
 	private Long orderId;
 	private Long customerId;
 	private String customerName;
-	private CustomerAddressResponseDTO deliveryAddress;// One order = one address only
+	private CustomerAddressResponseDTO customerAddress;;// One order = one address only
 	private LocalDateTime orderDate;
 	private String orderStatus;
 	private BigDecimal totalAmount;
@@ -51,12 +51,12 @@ public class OrderResponseDTO {
 		this.customerName = customerName;
 	}
 
-	public CustomerAddressResponseDTO getDeliveryAddress() {
-		return deliveryAddress;
+	public CustomerAddressResponseDTO getCustomerAddress() {
+		return customerAddress;
 	}
 
-	public void setDeliveryAddress(CustomerAddressResponseDTO deliveryAddress) {
-		this.deliveryAddress = deliveryAddress;
+	public void setCustomerAddress(CustomerAddressResponseDTO customerAddress) {
+		this.customerAddress = customerAddress;
 	}
 
 	public LocalDateTime getOrderDate() {

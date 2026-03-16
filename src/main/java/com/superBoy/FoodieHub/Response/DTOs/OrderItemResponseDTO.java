@@ -7,7 +7,7 @@ public class OrderItemResponseDTO {
 	private Long orderId;
 	private Long menuId;
 	private String itemName;
-	private Integer quantity;
+	private BigDecimal quantity;
 	private BigDecimal unitPrice;
 	private BigDecimal subtotal;
 
@@ -46,11 +46,11 @@ public class OrderItemResponseDTO {
 		this.itemName = itemName;
 	}
 
-	public Integer getQuantity() {
+	public BigDecimal getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(Integer quantity) {
+	public void setQuantity(BigDecimal quantity) {
 		this.quantity = quantity;
 	}
 

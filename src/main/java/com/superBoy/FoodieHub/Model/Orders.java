@@ -238,6 +238,14 @@ public class Orders {
 		this.payments = payments;
 	}
 
+	public Long getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(Long orderId) {
+		this.orderId = orderId;
+	}
+
 	@PrePersist
 	@PreUpdate
 	public void calculateFinalAmount() {

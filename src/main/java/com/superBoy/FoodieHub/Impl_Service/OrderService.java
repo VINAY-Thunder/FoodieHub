@@ -38,7 +38,7 @@ public class OrderService implements IOrderService {
 	private CustomerAddressRepository addressrepo;
 	private CustomerRepository customerrepo;
 	private OrderRepository orderrepo;
-//	private OrderItemRepository orderitemrepo;
+	private OrderItemRepository orderitemrepo;
 	private MenuRepository menurepo;
 	private ModelMapper modelMapper;
 
@@ -91,7 +91,7 @@ public class OrderService implements IOrderService {
 
 			// Check menu available
 			if (menuEntity.getMenuStatus() == MenuStatus.UNAVAILABLE) {
-				throw new MenuNotFoundException("Requesting Menu Is not Avaiable" + menuEntity.getItemName());
+				throw new MenuNotFoundException("Requesting Menu Is not Avaiable: " + menuEntity.getItemName());
 			}
 
 			// Get snapshot price
@@ -137,7 +137,8 @@ public class OrderService implements IOrderService {
 		order.setCustomerAddress(address);
 		order.setDeliveryCharge(deliveyCharge);
 		order.setDiscountAmount(discountAmount);
-		order.setFinalAmount(finalAmount);
+//		order.setFinalAmount(finalAmount);
+		order.setTotalAmount(totalAmount);   
 		order.setOrderItems(orderItemsList);
 		order.setTaxAmount(taxAmount);
 		order.setOrderType(orderRequestDTO.getOrderType());
@@ -168,7 +169,7 @@ public class OrderService implements IOrderService {
 	@Override
 	public List<OrderResponseDTO> getOrdersByCustomerId(Long customerId) throws CustomerNotFoundException {
 		customerrepo.findById(customerId)
-				.orElseThrow(() -> new CustomerNotFoundException("Customer is found with id " + customerId));
+				.orElseThrow(() -> new CustomerNotFoundException("This Customer hasn't ordered yet, customerId : " + customerId));
 
 		List<Orders> orderEntity = orderrepo.findByCustomerCustomerId(customerId);
 		return orderEntity.stream().map(order -> modelMapper.map(order, OrderResponseDTO.class)).toList();
@@ -238,7 +239,7 @@ public class OrderService implements IOrderService {
 		List<Orders> orderEntityList = orderrepo.findByOrderType(orderType);
 
 		if (orderEntityList.isEmpty() == true) {
-			throw new OrderNotFoundException("Order Not Found with Odertype" + orderType);
+			throw new OrderNotFoundException("Order Not Found with Odertype: " + orderType);
 		}
 
 		return orderEntityList.stream().map(orderStatus -> modelMapper.map(orderStatus, OrderResponseDTO.class))
