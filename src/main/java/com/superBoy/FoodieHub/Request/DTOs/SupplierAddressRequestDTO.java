@@ -9,7 +9,6 @@ import jakarta.validation.constraints.Size;
 
 public class SupplierAddressRequestDTO {
 
-	@NotNull(message = "Supplier ID is required")
 	private Long supplierId;
 
 	@NotBlank(message = "Street is required")
@@ -19,7 +18,7 @@ public class SupplierAddressRequestDTO {
 	@NotBlank(message = "City is required")
 	@Size(max = 100, message = "City must not exceed 100 characters")
 	private String city;
-
+	
 	@NotBlank(message = "State is required")
 	@Size(max = 100, message = "State must not exceed 100 characters")
 	private String state;

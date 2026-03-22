@@ -18,14 +18,19 @@ public class Supplier {
 	@Column(name = "supplier_name", nullable = false)
 	private String supplierName;
 
+	@Enumerated(EnumType.STRING)
 	@Column(name = "contact_person")
-	private String contactPerson;
+	private com.superBoy.FoodieHub.Enums.ContactPerson contactPerson;
 
 	@Column(name = "email", unique = true)
 	private String email;
 
 	@Column(name = "phone")
 	private String phone;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name = "status")
+	private com.superBoy.FoodieHub.Enums.Supplier_Status status;
 
 	@CreationTimestamp
 	@Column(name = "created_at")
@@ -56,12 +61,20 @@ public class Supplier {
 		this.supplierName = supplierName;
 	}
 
-	public String getContactPerson() {
+	public com.superBoy.FoodieHub.Enums.ContactPerson getContactPerson() {
 		return contactPerson;
 	}
 
-	public void setContactPerson(String contactPerson) {
+	public void setContactPerson(com.superBoy.FoodieHub.Enums.ContactPerson contactPerson) {
 		this.contactPerson = contactPerson;
+	}
+
+	public com.superBoy.FoodieHub.Enums.Supplier_Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(com.superBoy.FoodieHub.Enums.Supplier_Status status) {
+		this.status = status;
 	}
 
 	public String getEmail() {

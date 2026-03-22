@@ -27,6 +27,10 @@ public class SupplierAddress {
 	@Column(name = "zip_code")
 	private String zipCode;
 
+	@Enumerated(EnumType.STRING)
+	@Column(name = "address_type", nullable = false)
+	private com.superBoy.FoodieHub.Enums.SupplierAddressType addressType;
+
 	public SupplierAddress() {
 	}
 
@@ -76,5 +80,13 @@ public class SupplierAddress {
 
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
+	}
+
+	public com.superBoy.FoodieHub.Enums.SupplierAddressType getAddressType() {
+		return addressType;
+	}
+
+	public void setAddressType(com.superBoy.FoodieHub.Enums.SupplierAddressType addressType) {
+		this.addressType = addressType;
 	}
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RazorPay Test Checkout</title>
+    <!-- Include Razorpay Checkout Script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; padding: 50px;">
+
+    <h2>FoodieHub Payment Test</h2>
+    <p>Enter the Order details below to test the full backend payment flow:</p>
+    
+    <div style="margin-bottom: 20px;">
+        <label><b>Order ID:</b></label>
+        <input type="number" id="input-order-id" value="1" style="padding: 5px; margin-right: 15px; width: 60px;">
+        
+        <label><b>Customer ID:</b></label>
+        <input type="number" id="input-customer-id" value="1" style="padding: 5px; margin-right: 15px; width: 60px;">
+        
+        <label><b>Amount (₹):</b></label>
+        <input type="number" id="input-amount" value="500" style="padding: 5px; width: 80px;">
+    </div>
+
+    <button id="pay-btn" style="padding: 10px 20px; font-size: 16px; background: #3399cc; color: #fff; border: none; cursor: pointer;">
+        Pay Now
+    </button>
+    <div id="status" style="margin-top: 20px; color: green; font-weight: bold;"></div>
+
+    <script>
+        document.getElementById('pay-btn').onclick = async function (e) {
+            e.preventDefault();
+            
+            // Dynamically grab the values YOU typed into the text boxes!
+            const dynamicOrderId = parseInt(document.getElementById('input-order-id').value);
+            const dynamicCustomerId = parseInt(document.getElementById('input-customer-id').value);
+            const dynamicAmount = parseFloat(document.getElementById('input-amount').value);
+
+            // 1. Call Your Spring Boot Backend to Create the Order
+            const initialRequest = {
+                orderId: dynamicOrderId,
+                customerId: dynamicCustomerId,
+                amount: dynamicAmount,
+                paymentMethod: "UPI"
+            };
+
+            const response = await fetch('http://localhost:5050/cafeApp/payments/create-order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(initialRequest)
+            });
+
+            const orderData = await response.json();
+            
+            // 2. Open Razorpay Window using the generated Order ID
+            var options = {
+                "key": "rzp_test_SUHqoly9lHieGi", // Your Test Key
+                "amount": (dynamicAmount * 100).toString(), // Dynamically calculated!
+                "currency": "INR",
+                "name": "Foodie Hub",
+                "description": "Test Transaction",
+                "order_id": orderData.razorpayOrderId, // Order ID from your backend
+                
+                // 3. This runs automatically AFTER the user pays inside Razorpay successfully
+                "handler": async function (paymentResponse) {
+                    
+                    // We display the exact 3 variables on the screen for you to see them!
+                    document.getElementById('status').innerHTML += 
+                        "<br><br><b>Here is your hidden data that Razorpay generated (Copy to Postman if you want!):</b>" +
+                        "<br><b>1. razorpayOrderId:</b> " + paymentResponse.razorpay_order_id +
+                        "<br><b>2. razorpayPaymentId:</b> " + paymentResponse.razorpay_payment_id +
+                        "<br><b>3. razorpaySignature:</b> <div style='word-break: break-all; color: gray;'>" + paymentResponse.razorpay_signature + "</div>";
+
+                    // We send the signatures back to your Spring Boot Verify Endpoint
+                    initialRequest.razorpayOrderId = paymentResponse.razorpay_order_id;
+                    initialRequest.razorpayPaymentId = paymentResponse.razorpay_payment_id;
+                    initialRequest.razorpaySignature = paymentResponse.razorpay_signature;
+
+                    const verifyRes = await fetch('http://localhost:5050/cafeApp/payments/verify', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(initialRequest)
+                    });
+
+                    if(verifyRes.ok) {
+                        document.getElementById('status').innerText = "✅ PAYMENT SUCCESSFUL AND VERIFIED BY SPRING BOOT!";
+                    } else {
+                        document.getElementById('status').innerText = "❌ PAYMENT VERIFICATION FAILED!";
+                    }
+                },
+                "theme": { "color": "#3399cc" }
+            };
+
+            var rzp = new Razorpay(options);
+            rzp.on('payment.failed', function (response){
+                alert("Payment Failed!");
+            });
+            rzp.open();
+        };
+    </script>
+</body>
+</html>

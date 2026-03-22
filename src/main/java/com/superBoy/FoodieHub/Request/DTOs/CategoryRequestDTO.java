@@ -26,6 +26,8 @@ public class CategoryRequestDTO {
 
 	public CategoryRequestDTO() {
 	}
+	
+	// getters & setters
 
 	public String getCategoryName() {
 		return categoryName;
@@ -66,7 +68,5 @@ public class CategoryRequestDTO {
 	public void setImageFile(MultipartFile imageFile) {
 		this.imageFile = imageFile;
 	}
-
-	// getters & setters
 
 }

@@ -73,7 +73,7 @@ public class CustomerService implements IcustomerService {
 	}
 
 	@Override
-	public CustomerResponseDTO updateCustomer(Long customerID,CustomerUpdateRequestDTO customerUpdateRequestDTO)
+	public CustomerResponseDTO updateCustomer(Long customerID, CustomerUpdateRequestDTO customerUpdateRequestDTO)
 			throws CustomerNotFoundException {
 		Customer customerEntity;
 		Optional<Customer> optional = customerrepo.findById(customerID);
@@ -108,7 +108,7 @@ public class CustomerService implements IcustomerService {
 		Optional<Customer> optional = customerrepo.findById(customerID);
 		if (optional.isPresent()) {
 			customerrepo.deleteById(customerID);
-			return "Succesfully Deleted Customer ID: "+customerID;
+			return "Succesfully Deleted Customer ID: " + customerID;
 		}
 		throw new CustomerNotFoundException("Customer not found with ID: " + customerID);
 	}

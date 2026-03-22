@@ -23,7 +23,35 @@ public class SupplierPaymentRequestDTO {
 	@NotNull(message = "Payment method is required")
 	private SupplierPaymentMethod paymentMethod;
 
+	private String razorpayOrderId;
+	private String razorpayPaymentId;
+	private String razorpaySignature;
+
 	public SupplierPaymentRequestDTO() {
+	}
+
+	public String getRazorpayOrderId() {
+		return razorpayOrderId;
+	}
+
+	public void setRazorpayOrderId(String razorpayOrderId) {
+		this.razorpayOrderId = razorpayOrderId;
+	}
+
+	public String getRazorpayPaymentId() {
+		return razorpayPaymentId;
+	}
+
+	public void setRazorpayPaymentId(String razorpayPaymentId) {
+		this.razorpayPaymentId = razorpayPaymentId;
+	}
+
+	public String getRazorpaySignature() {
+		return razorpaySignature;
+	}
+
+	public void setRazorpaySignature(String razorpaySignature) {
+		this.razorpaySignature = razorpaySignature;
 	}
 
 	public Long getPurchaseOrderId() {

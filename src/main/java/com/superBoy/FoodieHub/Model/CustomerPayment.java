@@ -111,4 +111,8 @@ public class CustomerPayment {
 		this.paymentStatus = paymentStatus;
 	}
 
+	public Long getPaymentId() {
+		return paymentId;
+	}
+
 }

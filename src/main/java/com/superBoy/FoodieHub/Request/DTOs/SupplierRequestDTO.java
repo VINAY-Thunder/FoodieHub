@@ -1,6 +1,7 @@
 package com.superBoy.FoodieHub.Request.DTOs;
 
 import com.superBoy.FoodieHub.Enums.ContactPerson;
+import com.superBoy.FoodieHub.Enums.Supplier_Status;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -25,7 +26,29 @@ public class SupplierRequestDTO {
 	@Pattern(regexp = "^[0-9]{10}$", message = "Phone must be 10 digits")
 	private String phone;
 
+	@NotNull(message = "Supplier status is required")
+	private Supplier_Status status;
+
+	// SupplierAddressDTO
+	private SupplierAddressRequestDTO addresses;
+
 	public SupplierRequestDTO() {
+	}
+
+	public Supplier_Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Supplier_Status status) {
+		this.status = status;
+	}
+
+	public SupplierAddressRequestDTO getAddresses() {
+		return addresses;
+	}
+
+	public void setAddresses(SupplierAddressRequestDTO addresses) {
+		this.addresses = addresses;
 	}
 
 	public String getSupplierName() {

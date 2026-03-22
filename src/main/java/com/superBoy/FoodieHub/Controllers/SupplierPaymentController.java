@@ -10,6 +10,8 @@ import com.superBoy.FoodieHub.Request.DTOs.SupplierPaymentRequestDTO;
 import com.superBoy.FoodieHub.Response.DTOs.SupplierPaymentResponseDTO;
 import jakarta.validation.Valid;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/supplier-payments")
 public class SupplierPaymentController {
@@ -21,9 +23,14 @@ public class SupplierPaymentController {
         this.paymentService = paymentService;
     }
 
-    @PostMapping
-    public ResponseEntity<SupplierPaymentResponseDTO> processPayment(@RequestBody @Valid SupplierPaymentRequestDTO dto) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(paymentService.processPayment(dto));
+    @PostMapping("/create-order")
+    public ResponseEntity<Map<String, String>> createRazorPayOrder(@RequestBody @Valid SupplierPaymentRequestDTO dto) throws Exception {
+        return ResponseEntity.status(HttpStatus.CREATED).body(paymentService.createRazorPayOrder(dto));
+    }
+
+    @PostMapping("/verify")
+    public ResponseEntity<SupplierPaymentResponseDTO> verifyAndSavePayment(@RequestBody @Valid SupplierPaymentRequestDTO dto) throws Exception {
+        return ResponseEntity.status(HttpStatus.CREATED).body(paymentService.verifyAndSavePayment(dto));
     }
 
     @GetMapping("/supplier/{supplierId}")

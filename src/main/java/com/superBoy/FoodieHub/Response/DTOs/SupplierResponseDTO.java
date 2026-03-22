@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import com.superBoy.FoodieHub.Enums.ContactPerson;
+import com.superBoy.FoodieHub.Enums.Supplier_Status;
 
 public class SupplierResponseDTO {
 	private Long supplierId;
@@ -11,11 +12,20 @@ public class SupplierResponseDTO {
 	private ContactPerson contactPerson;
 	private String email;
 	private String phone;
+	private com.superBoy.FoodieHub.Enums.Supplier_Status status;
 	private LocalDateTime createdAt;
 	private List<SupplierAddressResponseDTO> addresses;
 
 	
 	public SupplierResponseDTO() {
+	}
+
+	public com.superBoy.FoodieHub.Enums.Supplier_Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Supplier_Status status) {
+		this.status = status;
 	}
 
 	public Long getSupplierId() {

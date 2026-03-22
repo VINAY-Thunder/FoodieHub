@@ -54,7 +54,7 @@ public class GlobalExceptionHandling {
 		return new ResponseEntity<>(message, HttpStatus.BAD_REQUEST);
 	}
 
-	// Catches invalid enum value passed in request (e.g. "INVALID" instead of
+	// it will Catch invalid enum value passed in request (e.g. "INVALID" instead of
 	// "AVAILABLE")
 	@ExceptionHandler(MethodArgumentTypeMismatchException.class)
 	public ResponseEntity<String> handleTypeMismatch(MethodArgumentTypeMismatchException e) {
@@ -99,6 +99,36 @@ public class GlobalExceptionHandling {
 
 	@ExceptionHandler(OrderNotFoundException.class)
 	public ResponseEntity<String> handleOrderNotFound(OrderNotFoundException ex) {
+		return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+	}
+
+	@ExceptionHandler(PaymentVerificationException.class)
+	public ResponseEntity<String> handlePaymentVerificationNotFound(PaymentVerificationException ex) {
+		return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+	}
+
+	@ExceptionHandler(SupplierNotException.class)
+	public ResponseEntity<String> handleSupplierNotFound(SupplierNotException ex) {
+		return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+	}
+
+	@ExceptionHandler(SupplierAddressNotException.class)
+	public ResponseEntity<String> handleSupplierAddressNotFound(SupplierAddressNotException ex) {
+		return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+	}
+
+	@ExceptionHandler(PurchaseOrderNotFoundException.class)
+	public ResponseEntity<String> handlePurchaseOrderNotFound(PurchaseOrderNotFoundException ex) {
+		return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+	}
+
+	@ExceptionHandler(DuplicatePaymentException.class)
+	public ResponseEntity<String> handleDuplicatePayment(DuplicatePaymentException ex) {
+		return new ResponseEntity<>(ex.getMessage(), HttpStatus.CONFLICT);
+	}
+
+	@ExceptionHandler(PaymentNotFoundException.class)
+	public ResponseEntity<String> handlePaymentNotFound(PaymentNotFoundException ex) {
 		return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
 	}
 

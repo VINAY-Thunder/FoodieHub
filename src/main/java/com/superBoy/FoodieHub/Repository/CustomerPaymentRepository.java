@@ -10,4 +10,6 @@ public interface CustomerPaymentRepository extends JpaRepository<CustomerPayment
 
 	List<CustomerPayment> findByCustomerCustomerId(Long customerId);
 
+	boolean existsByOrderOrderIdAndPaymentStatus(Long orderId, com.superBoy.FoodieHub.Enums.CustomerPaymentStatus status);
+
 }

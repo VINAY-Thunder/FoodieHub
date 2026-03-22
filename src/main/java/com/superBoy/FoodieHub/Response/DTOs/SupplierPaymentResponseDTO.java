@@ -12,7 +12,7 @@ public class SupplierPaymentResponseDTO {
 	private String supplierName;
 	private BigDecimal amount;
 	private SupplierPaymentMethod paymentMethod;
-	private SupplierPaymentMethod paymentStatus;
+	private com.superBoy.FoodieHub.Enums.SupplierPaymentStatus paymentStatus;
 	private String transactionId;
 	private LocalDateTime paymentDate;
 
@@ -67,11 +67,11 @@ public class SupplierPaymentResponseDTO {
 		this.paymentMethod = paymentMethod;
 	}
 
-	public SupplierPaymentMethod getPaymentStatus() {
+	public com.superBoy.FoodieHub.Enums.SupplierPaymentStatus getPaymentStatus() {
 		return paymentStatus;
 	}
 
-	public void setPaymentStatus(SupplierPaymentMethod paymentStatus) {
+	public void setPaymentStatus(com.superBoy.FoodieHub.Enums.SupplierPaymentStatus paymentStatus) {
 		this.paymentStatus = paymentStatus;
 	}
 

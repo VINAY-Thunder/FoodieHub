@@ -4,13 +4,16 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import com.superBoy.FoodieHub.Enums.CustomerPaymentMethod;
+import com.superBoy.FoodieHub.Enums.CustomerPaymentStatus;
 
 public class CustomerPaymentSummaryDTO {
 
-	private Long paymentId;
-	private BigDecimal amount;
-	private CustomerPaymentMethod paymentStatus;
-	private LocalDateTime paymentDate;
+	    private Long paymentId;
+	    private BigDecimal amount;
+	    private CustomerPaymentStatus paymentStatus;
+	    private LocalDateTime paymentDate;
+
+	    // getters and setters...
 
 	public Long getPaymentId() {
 		return paymentId;
@@ -28,11 +31,11 @@ public class CustomerPaymentSummaryDTO {
 		this.amount = amount;
 	}
 
-	public CustomerPaymentMethod getPaymentStatus() {
+	public CustomerPaymentStatus getPaymentStatus() {
 		return paymentStatus;
 	}
 
-	public void setPaymentStatus(CustomerPaymentMethod paymentStatus) {
+	public void setPaymentStatus(CustomerPaymentStatus paymentStatus) {
 		this.paymentStatus = paymentStatus;
 	}
 
