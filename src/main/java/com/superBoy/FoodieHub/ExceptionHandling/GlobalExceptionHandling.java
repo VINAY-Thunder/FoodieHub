@@ -132,4 +132,9 @@ public class GlobalExceptionHandling {
 		return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
 	}
 
+	@ExceptionHandler(PurchaseItemNotFoundException.class)
+	public ResponseEntity<String> handlePurchaseItemNotFound(PurchaseItemNotFoundException ex) {
+		return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+	}
+
 }

@@ -1,10 +1,23 @@
 package com.superBoy.FoodieHub.Model;
 
-import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
 import org.hibernate.annotations.CreationTimestamp;
+
+import com.superBoy.FoodieHub.Enums.ContactPerson;
+import com.superBoy.FoodieHub.Enums.Supplier_Status;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "SUPPLIER")
@@ -20,7 +33,7 @@ public class Supplier {
 
 	@Enumerated(EnumType.STRING)
 	@Column(name = "contact_person")
-	private com.superBoy.FoodieHub.Enums.ContactPerson contactPerson;
+	private ContactPerson contactPerson;
 
 	@Column(name = "email", unique = true)
 	private String email;
@@ -30,7 +43,7 @@ public class Supplier {
 	
 	@Enumerated(EnumType.STRING)
 	@Column(name = "status")
-	private com.superBoy.FoodieHub.Enums.Supplier_Status status;
+	private Supplier_Status status;
 
 	@CreationTimestamp
 	@Column(name = "created_at")
@@ -69,7 +82,7 @@ public class Supplier {
 		this.contactPerson = contactPerson;
 	}
 
-	public com.superBoy.FoodieHub.Enums.Supplier_Status getStatus() {
+	public Supplier_Status getStatus() {
 		return status;
 	}
 

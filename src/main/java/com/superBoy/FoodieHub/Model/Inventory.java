@@ -13,6 +13,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -54,7 +55,7 @@ public class Inventory {
 	 * Inverse side of ManyToMany with Menu via MENU_INVENTORY junction table. An
 	 * inventory item (ingredient) can be used in multiple menu items.
 	 */
-	@JsonIgnore
+	@JsonIgnore  // ← STOP Jackson from touching this field
 	@ManyToMany(mappedBy = "inventoryItems")
 	private List<Menu> menus;
 
@@ -125,13 +126,8 @@ public class Inventory {
 		this.lastUpdated = lastUpdated;
 	}
 
-//	public List<PurchaseOrder> getPurchaseOrders() {
-//		return purchaseOrders;
-//	}
-//
-//	public void setPurchaseOrders(List<PurchaseOrder> purchaseOrders) {
-//		this.purchaseOrders = purchaseOrders;
-//	}
+//	@OneToMany(mappedBy = "purchaseOrder") // newly added
+//	private List<PurchaseItem> purchaseItems;
 
 	public List<Menu> getMenus() {
 		return menus;

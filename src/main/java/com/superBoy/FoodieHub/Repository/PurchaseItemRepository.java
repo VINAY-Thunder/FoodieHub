@@ -4,6 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.superBoy.FoodieHub.Model.PurchaseItem;
 
-public interface PurchaseItemRepository extends JpaRepository<PurchaseItem, Long> {
+import java.util.List;
 
+public interface PurchaseItemRepository extends JpaRepository<PurchaseItem, Long> {
+	List<PurchaseItem> findByPurchaseOrderPurchaseOrderId(Long purchaseOrderId);
 }

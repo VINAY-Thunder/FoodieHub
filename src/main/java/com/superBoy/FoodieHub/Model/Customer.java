@@ -54,7 +54,7 @@ public class Customer {
 	private Boolean isActive = true; // false = account blocked by admin
 
 	@Column(name = "loyalty_points", nullable = false)
-	private Integer loyaltyPoints = 0;
+	private Integer loyaltyPoints = 0;// future features Update
 
 	@CreationTimestamp
 	@Column(name = "created_at", updatable = false)
