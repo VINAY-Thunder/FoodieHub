@@ -1,0 +1,11 @@
+implemented today 25/march/2026 
+*PurchaseOrder Controller is Done testing -->> done
+*What markPaymentAsFailed
+ does (in 2 lines): It acts as a safety catcher for the Razorpay popup window, instantly grabbing any bank declines or wrong OTP errors. It takes those errors and permanently logs a FAILED record into your database so you can always see who tried to pay but failed!
+*Option 2 (Manual Capture) across your entire backend for both Customers and Suppliers!
+*he best practice is to ignore the paymentMethod sent by the frontend UI entirely. Instead, inside your Java 
+verifyAndSavePayment(Method)
+ method, you can use the Razorpay API to dynamically ask Razorpay what method the user actually clicked!
+*// SECURITY UPDATE: Fetch true total amount directly from database, ignoring any frontend tampering!
+// The backend now securely reads it directly from the Database so hackers cannot manipulate the price.ods 
+* some customer and SupplierPayment service ,controller layers are added new methods like findAll()
