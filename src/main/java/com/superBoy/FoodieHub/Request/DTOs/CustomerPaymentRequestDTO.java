@@ -13,9 +13,8 @@ public class CustomerPaymentRequestDTO {
 	@NotNull(message = "Customer ID is required")
 	private Long customerId;
 
-	@NotNull(message = "Amount is required")
-	@DecimalMin(value = "0.0", inclusive = false, message = "Amount must be greater than 0")
-	private BigDecimal amount;
+	// 1. SECURITY UPDATE: I intentionally removed the 'amount' field from this DTO!
+	// The backend now securely reads it directly from the Database so hackers cannot manipulate the price.
 
 	@NotNull(message = "Payment method is required")
 	private CustomerPaymentMethod paymentMethod;
@@ -69,13 +68,7 @@ public class CustomerPaymentRequestDTO {
 		this.customerId = customerId;
 	}
 
-	public BigDecimal getAmount() {
-		return amount;
-	}
-
-	public void setAmount(BigDecimal amount) {
-		this.amount = amount;
-	}
+	// getters and setters for amount removed
 
 	public CustomerPaymentMethod getPaymentMethod() {
 		return paymentMethod;

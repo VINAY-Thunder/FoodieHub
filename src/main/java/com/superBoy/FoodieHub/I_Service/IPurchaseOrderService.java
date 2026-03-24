@@ -10,4 +10,5 @@ public interface IPurchaseOrderService {
     PurchaseOrderResponseDTO getPurchaseOrderById(Long purchaseOrderId);
     List<PurchaseOrderResponseDTO> getAllPurchaseOrders();
     PurchaseOrderResponseDTO updatePurchaseOrderStatus(Long purchaseOrderId, PurchaseOrderStatus status);
+    String removePurchaseOrderById(Long purchaseId);
 }

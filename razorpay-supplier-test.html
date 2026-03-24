@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RazorPay Test Checkout - SUPPLIERS</title>
+    <!-- Include Razorpay Checkout Script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; padding: 50px;">
+
+    <h2>FoodieHub SUPPLIER Payment Test</h2>
+    <p>Enter the Purchase Order details below to test the full backend payment flow:</p>
+    
+    <div style="margin-bottom: 20px;">
+        <label><b>Purchase Order ID:</b></label>
+        <input type="number" id="input-po-id" value="2" style="padding: 5px; margin-right: 15px; width: 60px;">
+        
+        <label><b>Supplier ID:</b></label>
+        <input type="number" id="input-supplier-id" value="7" style="padding: 5px; margin-right: 15px; width: 60px;">
+    </div>
+
+    <button id="pay-btn" style="padding: 10px 20px; font-size: 16px; background: #cc3333; color: #fff; border: none; cursor: pointer;">
+        Pay Supplier Now
+    </button>
+    <div id="status" style="margin-top: 20px; color: green; font-weight: bold;"></div>
+
+    <script>
+        document.getElementById('pay-btn').onclick = async function (e) {
+            e.preventDefault();
+            document.getElementById('status').innerText = "Processing...";
+            
+            const dynamicPoId = parseInt(document.getElementById('input-po-id').value);
+            const dynamicSupplierId = parseInt(document.getElementById('input-supplier-id').value);
+
+            // 1. Hit the SUPPLIER endpoint with supplier fields
+            const initialRequest = {
+                purchaseOrderId: dynamicPoId,
+                supplierId: dynamicSupplierId,
+                paymentMethod: "UPI"
+            };
+
+            try {
+                const response = await fetch('http://localhost:5050/cafeApp/supplier-payments/create-order', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(initialRequest)
+                });
+
+                if(!response.ok) {
+                    throw new Error("Failed to create order. Check console/backend logs.");
+                }
+
+                const orderData = await response.json();
+                console.log("Order Data:", orderData);
+                
+                // 2. Open Razorpay Window
+                var options = {
+                    "key": "rzp_test_SUHqoly9lHieGi", 
+                    "amount": orderData.amount, 
+                    "currency": "INR",
+                    "name": "Foodie Hub Supplier Payout",
+                    "description": "Paying Supplier ID: " + dynamicSupplierId,
+                    "order_id": orderData.razorpayOrderId, 
+                    
+                    "handler": async function (paymentResponse) {
+                        
+                        document.getElementById('status').innerHTML = 
+                            "<br><b>Payment Successful on Razorpay front-end! Verifying...</b>";
+
+                        initialRequest.razorpayOrderId = paymentResponse.razorpay_order_id;
+                        initialRequest.razorpayPaymentId = paymentResponse.razorpay_payment_id;
+                        initialRequest.razorpaySignature = paymentResponse.razorpay_signature;
+
+                        // 3. Verify SUPPLIER payment
+                        const verifyRes = await fetch('http://localhost:5050/cafeApp/supplier-payments/verify', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(initialRequest)
+                        });
+
+                        if(verifyRes.ok) {
+                            document.getElementById('status').innerText = "✅ SUPPLIER PAYMENT SUCCESSFUL AND VERIFIED!";
+                        } else {
+                            const errorText = await verifyRes.text();
+                            document.getElementById('status').innerText = "❌ " + errorText;
+                        }
+                    },
+                    "theme": { "color": "#cc3333" }
+                };
+
+                var rzp = new Razorpay(options);
+                rzp.on('payment.failed', async function (response){
+                    alert("Payment Failed via Razorpay! Logging to Database...");
+                    document.getElementById('status').innerText = "Logging payment failure to database...";
+                    
+                    initialRequest.razorpayOrderId = response.error.metadata.order_id;
+                    
+                    try {
+                        const failRes = await fetch('http://localhost:5050/cafeApp/supplier-payments/mark-failed', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(initialRequest)
+                        });
+                        
+                        if(failRes.ok) {
+                            document.getElementById('status').innerText = "❌ PAYMENT FAILED & LOGGED IN DATABASE!";
+                        } else {
+                            document.getElementById('status').innerText = "❌ PAYMENT FAILED (Logging to DB also failed)";
+                        }
+                    } catch(e) {
+                         document.getElementById('status').innerText = "❌ ERROR REACHING SERVER TO LOG FAILURE";
+                    }
+                });
+                rzp.open();
+                
+            } catch (err) {
+                document.getElementById('status').innerText = "❌ ERROR: " + err.message;
+            }
+        };
+    </script>
+</body>
+</html>

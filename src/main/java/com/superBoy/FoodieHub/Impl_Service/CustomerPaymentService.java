@@ -59,13 +59,16 @@ public class CustomerPaymentService implements ICustomerPaymentService {
 	// METHOD 1 — Create RazorPay Order
 	@Override
 	public Map<String, String> createRazorPayOrder(CustomerPaymentRequestDTO dto) throws RazorpayException {
-
-		int amountInPaise = dto.getAmount().multiply(BigDecimal.valueOf(100)).intValue();
+        // SECURITY UPDATE: Fetch true total amount directly from database, ignoring any frontend tampering!
+		Orders order = orderRepo.findById(dto.getOrderId())
+				.orElseThrow(() -> new com.superBoy.FoodieHub.ExceptionHandling.OrderNotFoundException("Order not found explicitly"));
+		int amountInPaise = order.getTotalAmount().multiply(BigDecimal.valueOf(100)).intValue();
 
 		JSONObject options = new JSONObject();
 		options.put("amount", amountInPaise);
 		options.put("currency", "INR");
 		options.put("receipt", "receipt_order_" + dto.getOrderId());
+		options.put("payment_capture", 0); // Option 2: Manual Capture later!
 
 		Order razorPayOrder = razorpayClient.orders.create(options);
 
@@ -105,18 +108,46 @@ public class CustomerPaymentService implements ICustomerPaymentService {
 			throw new PaymentVerificationException("Payment verification failed!");
 		}
 
+		// --- FETCH EXACT PAYMENT METHOD FROM RAZORPAY ---
+		String exactMethod = dto.getPaymentMethod().name();
+		try {
+			com.razorpay.Payment rzpPayment = razorpayClient.payments.fetch(dto.getRazorpayPaymentId());
+			if (rzpPayment.get("method") != null) {
+				exactMethod = rzpPayment.get("method").toString().toUpperCase();
+			}
+		} catch (Exception e) {
+             System.out.println("Could not fetch real method, using fallback.");
+        }
+
 		// Step 4: Build entity
 		CustomerPayment payment = new CustomerPayment();
 		payment.setCustomer(customer);
 		payment.setOrder(order);
-		payment.setAmount(dto.getAmount());
-		payment.setPaymentMethod(dto.getPaymentMethod());
+		payment.setAmount(order.getTotalAmount()); // 100% Secure!
+		try {
+			payment.setPaymentMethod(com.superBoy.FoodieHub.Enums.CustomerPaymentMethod.valueOf(exactMethod));
+		} catch (Exception e) {
+			payment.setPaymentMethod(dto.getPaymentMethod());
+		}
 		payment.setTransactionId(dto.getRazorpayPaymentId());
 		payment.setPaymentStatus(CustomerPaymentStatus.SUCCESS);
 		payment.setPaymentDate(LocalDateTime.now());
 
 		// Step 5: Save and return
 		CustomerPayment saved = paymentRepo.save(payment);
+
+		// OPTION 2: WE CAPTURE THE PAYMENT MANUALLY HERE BECAUSE THE DB CHECK PASSED
+		try {
+			JSONObject captureRequest = new JSONObject();
+			captureRequest.put("amount", order.getTotalAmount().multiply(BigDecimal.valueOf(100)).intValue());
+			captureRequest.put("currency", "INR");
+			
+			razorpayClient.payments.capture(dto.getRazorpayPaymentId(), captureRequest);
+			
+		} catch (RazorpayException e) {
+			throw new PaymentVerificationException("Manual Capture Failed on Razorpay! Money is safe. " + e.getMessage());
+		}
+
 		return mapToResponseDTO(saved);
 	}
 

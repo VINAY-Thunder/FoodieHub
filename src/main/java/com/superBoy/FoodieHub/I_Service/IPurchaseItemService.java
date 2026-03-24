@@ -13,5 +13,7 @@ public interface IPurchaseItemService {
 
 	PurchaseItemResponseDTO updatePurchaseItem(Long purchaseItemId, PurchaseItemRequestDTO purchaseItemRequestDTO);
 
+	List<PurchaseItemResponseDTO> getAllPurchaseItem();
+
 	void removePurchaseItem(Long purchaseItemId);
 }

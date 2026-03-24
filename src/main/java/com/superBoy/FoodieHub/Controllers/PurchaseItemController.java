@@ -24,31 +24,38 @@ import jakarta.validation.Valid;
 @RequestMapping("/purchase-items")
 public class PurchaseItemController {
 
-	@Autowired
 	private IPurchaseItemService purchaseItemService;
 
+	@Autowired
+	public PurchaseItemController(IPurchaseItemService purchaseItemService) {
+		this.purchaseItemService = purchaseItemService;
+	}
+
 	@PostMapping("/order/{purchaseOrderId}")
-	public ResponseEntity<PurchaseItemResponseDTO> createPurchaseItem(
-			@PathVariable Long purchaseOrderId,
+	public ResponseEntity<PurchaseItemResponseDTO> createPurchaseItem(@PathVariable Long purchaseOrderId,
 			@Valid @RequestBody PurchaseItemRequestDTO requestDTO) {
-		
+
 		PurchaseItemResponseDTO item = purchaseItemService.createPurchaseItem(purchaseOrderId, requestDTO);
 		return new ResponseEntity<>(item, HttpStatus.CREATED);
 	}
 
-	@GetMapping("/order/{purchaseOrderId}")
-	public ResponseEntity<List<PurchaseItemResponseDTO>> getPurchaseItemsByOrderId(
-			@PathVariable Long purchaseOrderId) {
-		
+	@GetMapping("/order/{purchaseOrderId}") // give purchaseOrderId return List of PurchaseItemResponseDTO
+	public ResponseEntity<List<PurchaseItemResponseDTO>> getPurchaseItemsByOrderId(@PathVariable Long purchaseOrderId) {
+
 		List<PurchaseItemResponseDTO> items = purchaseItemService.getPurchaseItemsByOrderId(purchaseOrderId);
 		return ResponseEntity.ok(items);
 	}
 
+	@GetMapping()
+	public ResponseEntity<List<PurchaseItemResponseDTO>> getAllPurchaseItems() {
+		return new ResponseEntity<List<PurchaseItemResponseDTO>>(purchaseItemService.getAllPurchaseItem(),
+				HttpStatus.OK);
+	}
+
 	@PutMapping("/{purchaseItemId}")
-	public ResponseEntity<PurchaseItemResponseDTO> updatePurchaseItem(
-			@PathVariable Long purchaseItemId,
+	public ResponseEntity<PurchaseItemResponseDTO> updatePurchaseItem(@PathVariable Long purchaseItemId,
 			@Valid @RequestBody PurchaseItemRequestDTO requestDTO) {
-		
+
 		PurchaseItemResponseDTO item = purchaseItemService.updatePurchaseItem(purchaseItemId, requestDTO);
 		return ResponseEntity.ok(item);
 	}

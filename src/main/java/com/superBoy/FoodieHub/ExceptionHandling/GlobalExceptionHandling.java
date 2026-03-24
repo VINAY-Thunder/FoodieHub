@@ -137,4 +137,9 @@ public class GlobalExceptionHandling {
 		return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
 	}
 
+	@ExceptionHandler(SupplierNotPaidException.class)
+	public ResponseEntity<String> handleSupplierNotPaidException(SupplierNotPaidException ex) {
+		return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+	}
+
 }

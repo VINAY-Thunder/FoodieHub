@@ -39,7 +39,7 @@ public class CustomerPayment {
 	private BigDecimal amount;
 
 	@Enumerated(EnumType.STRING)
-	@Column(name = "payment_method")
+	@Column(name = "payment_method", length = 50)
 	private CustomerPaymentMethod paymentMethod; // CASH, CARD, UPI, ONLINE
 
 	@Enumerated(EnumType.STRING)

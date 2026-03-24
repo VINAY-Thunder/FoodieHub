@@ -61,6 +61,10 @@ public class InventoryService implements IInventoryService {
         inventoryRepo.deleteById(id);
     }
 
+//    This endpoint here is mostly for quick, manual day-to-day changes 
+//    or kitchen consumption.
+//    In short: You adjust currentStock constantly as food is bought and cooked.
+//    You rarely manually adjust minStock because it's just a set rule or target.
     @Override
     public InventoryResponseDTO updateStock(Long id, Integer quantityChange) {
         Inventory existing = inventoryRepo.findById(id)

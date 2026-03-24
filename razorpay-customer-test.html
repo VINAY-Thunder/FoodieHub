@@ -17,9 +17,6 @@
         
         <label><b>Customer ID:</b></label>
         <input type="number" id="input-customer-id" value="1" style="padding: 5px; margin-right: 15px; width: 60px;">
-        
-        <label><b>Amount (₹):</b></label>
-        <input type="number" id="input-amount" value="500" style="padding: 5px; width: 80px;">
     </div>
 
     <button id="pay-btn" style="padding: 10px 20px; font-size: 16px; background: #3399cc; color: #fff; border: none; cursor: pointer;">
@@ -34,13 +31,11 @@
             // Dynamically grab the values YOU typed into the text boxes!
             const dynamicOrderId = parseInt(document.getElementById('input-order-id').value);
             const dynamicCustomerId = parseInt(document.getElementById('input-customer-id').value);
-            const dynamicAmount = parseFloat(document.getElementById('input-amount').value);
 
             // 1. Call Your Spring Boot Backend to Create the Order
             const initialRequest = {
                 orderId: dynamicOrderId,
                 customerId: dynamicCustomerId,
-                amount: dynamicAmount,
                 paymentMethod: "UPI"
             };
 
@@ -55,7 +50,7 @@
             // 2. Open Razorpay Window using the generated Order ID
             var options = {
                 "key": "rzp_test_SUHqoly9lHieGi", // Your Test Key
-                "amount": (dynamicAmount * 100).toString(), // Dynamically calculated!
+                "amount": orderData.amount, // Dynamically calculated!
                 "currency": "INR",
                 "name": "Foodie Hub",
                 "description": "Test Transaction",

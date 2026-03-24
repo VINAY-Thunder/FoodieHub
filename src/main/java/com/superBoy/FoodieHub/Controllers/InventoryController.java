@@ -47,8 +47,8 @@ public class InventoryController {
         return ResponseEntity.ok("Inventory item deleted successfully");
     }
 
-    @PatchMapping("/{id}/stock")
-    public ResponseEntity<InventoryResponseDTO> updateStock(@PathVariable Long id, @RequestParam Integer change) {
-        return ResponseEntity.ok(inventoryService.updateStock(id, change));
+    @PatchMapping("/{id}/stockChange")
+    public ResponseEntity<InventoryResponseDTO> updateStock(@PathVariable Long id, @RequestParam Integer stockChange) {
+        return ResponseEntity.ok(inventoryService.updateStock(id, stockChange));
     }
 }

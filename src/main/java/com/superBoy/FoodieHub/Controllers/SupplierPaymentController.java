@@ -33,6 +33,11 @@ public class SupplierPaymentController {
         return ResponseEntity.status(HttpStatus.CREATED).body(paymentService.verifyAndSavePayment(dto));
     }
 
+    @PostMapping("/mark-failed")
+    public ResponseEntity<SupplierPaymentResponseDTO> markPaymentAsFailed(@RequestBody @Valid SupplierPaymentRequestDTO dto) throws Exception {
+        return ResponseEntity.status(HttpStatus.CREATED).body(paymentService.markPaymentAsFailed(dto));
+    }
+
     @GetMapping("/supplier/{supplierId}")
     public ResponseEntity<List<SupplierPaymentResponseDTO>> getPaymentsBySupplierId(@PathVariable Long supplierId) {
         return ResponseEntity.ok(paymentService.getPaymentsBySupplierId(supplierId));
@@ -41,5 +46,10 @@ public class SupplierPaymentController {
     @GetMapping("/purchase-order/{poId}")
     public ResponseEntity<List<SupplierPaymentResponseDTO>> getPaymentsByPurchaseOrderId(@PathVariable Long poId) {
         return ResponseEntity.ok(paymentService.getPaymentsByPurchaseOrderId(poId));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<SupplierPaymentResponseDTO>> getAllPayments() {
+        return ResponseEntity.ok(paymentService.getAllPayments());
     }
 }

@@ -11,6 +11,7 @@ import com.superBoy.FoodieHub.Response.DTOs.PurchaseOrderResponseDTO;
 import com.superBoy.FoodieHub.Enums.PurchaseOrderStatus;
 import jakarta.validation.Valid;
 
+
 @RestController
 @RequestMapping("/purchase-orders")
 public class PurchaseOrderController {
@@ -37,8 +38,14 @@ public class PurchaseOrderController {
         return ResponseEntity.ok(poService.getAllPurchaseOrders());
     }
 
+    // PENDING, RECEIVED, CANCELLED
     @PatchMapping("/{id}/status")
     public ResponseEntity<PurchaseOrderResponseDTO> updateStatus(@PathVariable Long id, @RequestParam PurchaseOrderStatus status) {
         return ResponseEntity.ok(poService.updatePurchaseOrderStatus(id, status));
+    }
+    
+    @DeleteMapping("/{purchaseOrderId}")
+    public ResponseEntity<String> removePurchaseOrderId(@PathVariable Long purchaseOrderId) {
+    	return new ResponseEntity<String>(poService.removePurchaseOrderById(purchaseOrderId),HttpStatus.OK);
     }
 }

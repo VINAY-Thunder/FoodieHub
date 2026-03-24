@@ -1,7 +1,6 @@
 package com.superBoy.FoodieHub.Response.DTOs;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 public class InventoryResponseDTO {
 	private Long inventoryId;

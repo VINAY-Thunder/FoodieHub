@@ -41,7 +41,7 @@ public class SupplierPayment {
 	private BigDecimal amount;
 
 	@Enumerated(EnumType.STRING)
-	@Column(name = "payment_method")
+	@Column(name = "payment_method", length = 50)
 	private SupplierPaymentMethod paymentMethod; // BANK_TRANSFER, CHEQUE, CASH
 
 	@Enumerated(EnumType.STRING)
