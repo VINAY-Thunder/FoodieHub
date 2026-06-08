@@ -9,6 +9,7 @@ import java.math.BigDecimal;
  * in addition to the @ManyToMany on Order <-> Menu.
  */
 @Entity
+@Table(name = "ORDER_ITEM")
 public class OrderItem {
 
 	@Id

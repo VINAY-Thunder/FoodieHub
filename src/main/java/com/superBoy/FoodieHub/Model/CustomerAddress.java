@@ -16,7 +16,10 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
+import jakarta.persistence.Table;
+
 @Entity
+@Table(name = "CUSTOMER_ADDRESS")
 public class CustomerAddress {
 
 	@Id

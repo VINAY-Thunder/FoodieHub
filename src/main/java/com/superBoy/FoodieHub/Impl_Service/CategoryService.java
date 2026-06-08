@@ -6,6 +6,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import com.superBoy.FoodieHub.Enums.CategoryStatus;
 import com.superBoy.FoodieHub.ExceptionHandling.CategoryNotFoundException;
 import com.superBoy.FoodieHub.ExceptionHandling.InvalidFileException;
 import com.superBoy.FoodieHub.I_Service.ICategoryRequestService;
@@ -40,8 +41,6 @@ public class CategoryService implements ICategoryRequestService {
 			if (!file.getContentType().startsWith("image/")) {
 				throw new InvalidFileException("Only image files are allowed");
 			}
-			// String uniqueFileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
-			// // s3Service already handles UUID
 			String imageUrl = s3Service.uploadFile(file.getOriginalFilename(), file);
 			catgoryEntity.setImageUrl(imageUrl);
 		}
@@ -112,7 +111,6 @@ public class CategoryService implements ICategoryRequestService {
 
 		// 4️ If category already has an image → delete old image from S3
 		if (category.getImageUrl() != null && !category.getImageUrl().isBlank()) {
-
 			s3Service.deleteFile(category.getImageUrl());
 		}
 
@@ -132,20 +130,27 @@ public class CategoryService implements ICategoryRequestService {
 		return modelMapper.map(saved, CategoryResponseDTO.class);
 	}
 
+	// UPDATE STATUS
+	@Override
+	public CategoryResponseDTO updateCategoryStatus(Long categoryId, CategoryStatus status) {
+		Category category = categoryRepo.findById(categoryId)
+				.orElseThrow(() -> new CategoryNotFoundException("Category not found with ID: " + categoryId));
+		category.setCategoryStatus(status);
+		Category saved = categoryRepo.save(category);
+		return modelMapper.map(saved, CategoryResponseDTO.class);
+	}
+
 	// DELETE
 	@Override
 	public void deleteCategoryById(Long categoryId) {
 		Category category = categoryRepo.findById(categoryId)
 				.orElseThrow(() -> new CategoryNotFoundException("Category not found with ID: " + categoryId));
-		
-		if (category.getImageUrl()!= null && !category.getImageUrl().isBlank()) {
+
+		// Delete image from S3 if it exists (optional — no error if missing)
+		if (category.getImageUrl() != null && !category.getImageUrl().isBlank()) {
 			s3Service.deleteFile(category.getImageUrl());
-		} else {
-			throw new InvalidFileException(
-					"File is cannot be Deleted cause it empty" + category.getImageUrl());
 		}
 
 		categoryRepo.deleteById(categoryId);
-
 	}
 }

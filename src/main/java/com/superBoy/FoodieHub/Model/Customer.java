@@ -23,7 +23,10 @@ import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
+import jakarta.persistence.Table;
+
 @Entity
+@Table(name = "CUSTOMER")
 public class Customer {
 
 	@Id

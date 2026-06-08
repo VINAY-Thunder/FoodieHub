@@ -2,6 +2,7 @@ package com.superBoy.FoodieHub.Request.DTOs;
 
 import java.time.LocalDate;
 import com.superBoy.FoodieHub.Enums.GenderIdentity;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -14,7 +15,7 @@ public class CustomerRequestDTO {
 	private String name;
 
 	@NotBlank(message = "Email is required")
-	@Pattern(regexp = "^[A-Za-z0-9._%+-]+@gmail\\.com$", message = "Email must be a valid @gmail.com address")
+	@Pattern(regexp = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$", message = "Email must be a valid email address")
 	private String email;
 
 	@NotBlank(message = "Phone is required")
@@ -22,7 +23,7 @@ public class CustomerRequestDTO {
 	private String phone;
 
 	@NotBlank(message = "Password is required")
-	@Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,20}$", message = "Password must be 8–20 characters and include uppercase, lowercase, number, and special character")
+	@Size(min = 4, max = 100, message = "Password must be between 4 and 100 characters")
 	private String password; // Stored as BCrypt hash
 
 	@NotNull(message = "please enter correct Gender")
@@ -31,6 +32,7 @@ public class CustomerRequestDTO {
 	@NotNull(message = "please enter correct DOB")
 	private LocalDate dateOfBirth;
 
+	@Valid
 	private CustomerAddressRequestDTO address;
 
 	public CustomerAddressRequestDTO getAddress() {

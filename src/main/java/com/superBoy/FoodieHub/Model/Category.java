@@ -17,7 +17,10 @@ import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
+import jakarta.persistence.Table;
+
 @Entity
+@Table(name = "CATEGORY")
 public class Category {
 
 	@Id

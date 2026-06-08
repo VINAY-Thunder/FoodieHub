@@ -3,6 +3,7 @@ package com.superBoy.FoodieHub.Request.DTOs;
 import com.superBoy.FoodieHub.Enums.ContactPerson;
 import com.superBoy.FoodieHub.Enums.Supplier_Status;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -30,6 +31,7 @@ public class SupplierRequestDTO {
 	private Supplier_Status status;
 
 	// SupplierAddressDTO
+	@Valid
 	private SupplierAddressRequestDTO addresses;
 
 	public SupplierRequestDTO() {

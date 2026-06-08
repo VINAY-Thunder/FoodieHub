@@ -28,7 +28,10 @@ import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotNull;
 
+import jakarta.persistence.Table;
+
 @Entity
+@Table(name = "MENU")
 public class Menu {
 
 	@Id

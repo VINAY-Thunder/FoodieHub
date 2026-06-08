@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import com.superBoy.FoodieHub.Enums.CategoryStatus;
 import com.superBoy.FoodieHub.Request.DTOs.CategoryRequestDTO;
 import com.superBoy.FoodieHub.Response.DTOs.CategoryResponseDTO;
 import com.superBoy.FoodieHub.Update.CategoryUpdateDTO;
@@ -22,5 +23,6 @@ public interface ICategoryRequestService {
 	
 	void deleteCategoryById(Long categoryId);
 	
+	CategoryResponseDTO updateCategoryStatus(Long categoryId, CategoryStatus status);
 
 }

@@ -13,6 +13,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionTemplate;
+import org.springframework.transaction.PlatformTransactionManager;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.annotation.PostConstruct;
@@ -43,6 +45,7 @@ public class SupplierPaymentService implements ISupplierPaymentService {
 	private final PurchaseOrderRepository poRepo;
 	private final ModelMapper modelMapper;
 	private final RazorpayClient razorpayClient;
+	private final TransactionTemplate transactionTemplate;
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -52,25 +55,30 @@ public class SupplierPaymentService implements ISupplierPaymentService {
 
 	@Autowired
 	public SupplierPaymentService(SupplierPaymentRepository paymentRepo, SupplierRepository supplierRepo,
-			PurchaseOrderRepository poRepo, ModelMapper modelMapper, RazorpayClient razorpayClient) {
+			PurchaseOrderRepository poRepo, ModelMapper modelMapper, RazorpayClient razorpayClient,
+			PlatformTransactionManager transactionManager) {
 		this.paymentRepo = paymentRepo;
 		this.supplierRepo = supplierRepo;
 		this.poRepo = poRepo;
 		this.modelMapper = modelMapper;
 		this.razorpayClient = razorpayClient;
+		this.transactionTemplate = new TransactionTemplate(transactionManager);
 	}
 
     @PostConstruct
-    @Transactional
     public void fixDatabaseEnumColumns() {
-        try {
-            // Fix Hibernate 6 MySQL Enum truncation issues.
-            entityManager.createNativeQuery("ALTER TABLE supplier_payment MODIFY payment_method VARCHAR(50)").executeUpdate();
-            entityManager.createNativeQuery("ALTER TABLE customer_payment MODIFY payment_method VARCHAR(50)").executeUpdate();
-            System.out.println("✅ Database 'payment_method' columns successfully converted to VARCHAR(50).");
-        } catch (Exception e) {
-            System.out.println("⚠️ Could not execute ALTER TABLE: " + e.getMessage());
-        }
+        transactionTemplate.execute(status -> {
+            try {
+                // Fix Hibernate 6 MySQL Enum truncation issues.
+                entityManager.createNativeQuery("ALTER TABLE supplier_payment MODIFY payment_method VARCHAR(50)").executeUpdate();
+                entityManager.createNativeQuery("ALTER TABLE customer_payment MODIFY payment_method VARCHAR(50)").executeUpdate();
+                entityManager.createNativeQuery("ALTER TABLE orders MODIFY order_status VARCHAR(50)").executeUpdate();
+                System.out.println("✅ Database 'payment_method' and 'order_status' columns successfully converted to VARCHAR(50).");
+            } catch (Exception e) {
+                System.out.println("⚠️ Could not execute ALTER TABLE: " + e.getMessage());
+            }
+            return null;
+        });
     }
 
 	@Override
@@ -206,8 +214,8 @@ public class SupplierPaymentService implements ISupplierPaymentService {
 	@Override
 	public List<SupplierPaymentResponseDTO> getPaymentsBySupplierId(Long supplierId) {
 
-		poRepo.findById(supplierId)
-				.orElseThrow(() -> new PurchaseOrderNotFoundException("supplier is not found with id: " + supplierId));
+		supplierRepo.findById(supplierId)
+				.orElseThrow(() -> new SupplierNotException("supplier is not found with id: " + supplierId));
 
 		return paymentRepo.findAll().stream().filter(p -> p.getSupplier().getSupplierId().equals(supplierId))
 				.map(p -> modelMapper.map(p, SupplierPaymentResponseDTO.class)).toList();

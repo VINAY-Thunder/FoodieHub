@@ -1,5 +1,7 @@
 package com.superBoy.FoodieHub.Response.DTOs;
 
+import com.superBoy.FoodieHub.Enums.CategoryStatus;
+
 public class CategoryResponseDTO {
 
     private Long categoryId;
@@ -7,6 +9,7 @@ public class CategoryResponseDTO {
     private String description;
     private String imageUrl; //Needed for frontend
     private Integer displayOrder;
+    private CategoryStatus categoryStatus;
 
 	public CategoryResponseDTO() {
 	}
@@ -49,6 +52,14 @@ public class CategoryResponseDTO {
 
 	public void setDisplayOrder(Integer displayOrder) {
 		this.displayOrder = displayOrder;
+	}
+
+	public CategoryStatus getCategoryStatus() {
+		return categoryStatus;
+	}
+
+	public void setCategoryStatus(CategoryStatus categoryStatus) {
+		this.categoryStatus = categoryStatus;
 	}
 
 	

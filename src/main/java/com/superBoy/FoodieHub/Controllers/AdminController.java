@@ -8,42 +8,47 @@ import org.springframework.web.bind.annotation.*;
 import com.superBoy.FoodieHub.I_Service.IAdminService;
 import com.superBoy.FoodieHub.Request.DTOs.AdminRequestDTO;
 import com.superBoy.FoodieHub.Response.DTOs.AdminResponseDTO;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/admins")
 public class AdminController {
 
-    private final IAdminService adminService;
+	private final IAdminService adminService;
 
-    @Autowired
-    public AdminController(IAdminService adminService) {
-        this.adminService = adminService;
-    }
+	@Autowired
+	public AdminController(IAdminService adminService) {
+		this.adminService = adminService;
+	}
 
-    @PostMapping
-    public ResponseEntity<AdminResponseDTO> addAdmin(@RequestBody @Valid AdminRequestDTO dto) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(adminService.addAdmin(dto));
-    }
+	@PostMapping
+	public ResponseEntity<AdminResponseDTO> addAdmin(@RequestBody @Valid AdminRequestDTO dto) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(adminService.addAdmin(dto));
+	}
 
-    @GetMapping("/{id}")
-    public ResponseEntity<AdminResponseDTO> getAdminById(@PathVariable Long id) {
-        return ResponseEntity.ok(adminService.getAdminById(id));
-    }
+	@GetMapping("/{id}")
+	public ResponseEntity<AdminResponseDTO> getAdminById(@PathVariable Long id) {
+		return ResponseEntity.ok(adminService.getAdminById(id));
+	}
 
-    @GetMapping
-    public ResponseEntity<List<AdminResponseDTO>> getAllAdmins() {
-        return ResponseEntity.ok(adminService.getAllAdmins());
-    }
+	@GetMapping
+	public ResponseEntity<List<AdminResponseDTO>> getAllAdmins() {
+		return ResponseEntity.ok(adminService.getAllAdmins());
+	}
 
-    @PutMapping("/{id}")
-    public ResponseEntity<AdminResponseDTO> updateAdmin(@PathVariable Long id, @RequestBody @Valid AdminRequestDTO dto) {
-        return ResponseEntity.ok(adminService.updateAdmin(id, dto));
-    }
+	@PutMapping("/{id}")
+	public ResponseEntity<AdminResponseDTO> updateAdmin(@PathVariable Long id,
+			@RequestBody @Valid AdminRequestDTO dto) {
+		return ResponseEntity.ok(adminService.updateAdmin(id, dto));
+	}
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteAdmin(@PathVariable Long id) {
-        adminService.deleteAdmin(id);
-        return ResponseEntity.ok("Admin profile deleted successfully");
-    }
+	@DeleteMapping("/{id}")
+	public ResponseEntity<String> deleteAdmin(@PathVariable Long id) {
+		adminService.deleteAdmin(id);
+		return ResponseEntity.ok("Admin profile deleted successfully");
+	}
 }

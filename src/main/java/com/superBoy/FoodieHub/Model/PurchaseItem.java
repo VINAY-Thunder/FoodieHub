@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
+@Table(name = "PURCHASE_ITEM")
 public class PurchaseItem {
 
 	@Id

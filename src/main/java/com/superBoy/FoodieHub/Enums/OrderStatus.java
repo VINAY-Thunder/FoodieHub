@@ -9,5 +9,6 @@ public enum OrderStatus {
 	COMPLETED, // Order delivered / completed
 	CANCELLED ,// Order cancelled
 	PENDING,
-	DELIVERED
+	DELIVERED,
+	IN_PROGRESS
 }

@@ -6,6 +6,7 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandling {
@@ -140,6 +141,21 @@ public class GlobalExceptionHandling {
 	@ExceptionHandler(SupplierNotPaidException.class)
 	public ResponseEntity<String> handleSupplierNotPaidException(SupplierNotPaidException ex) {
 		return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+	}
+
+	@ExceptionHandler(MethodArgumentNotValidException.class)
+	public ResponseEntity<String> handleValidationExceptions(MethodArgumentNotValidException ex) {
+		String errorMessage = ex.getBindingResult().getFieldErrors().stream()
+				.map(error -> error.getDefaultMessage())
+				.findFirst()
+				.orElse("Validation error");
+		return new ResponseEntity<>(errorMessage, HttpStatus.BAD_REQUEST);
+	}
+
+	@ExceptionHandler(org.springframework.dao.InvalidDataAccessApiUsageException.class)
+	public ResponseEntity<String> handleDataAccessApiUsage(org.springframework.dao.InvalidDataAccessApiUsageException ex) {
+		String msg = ex.getMostSpecificCause() != null ? ex.getMostSpecificCause().getMessage() : ex.getMessage();
+		return new ResponseEntity<>(msg, HttpStatus.BAD_REQUEST);
 	}
 
 }

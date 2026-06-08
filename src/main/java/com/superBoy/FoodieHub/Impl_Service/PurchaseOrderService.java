@@ -121,8 +121,12 @@ public class PurchaseOrderService implements IPurchaseOrderService {
         if (status == PurchaseOrderStatus.RECEIVED && oldStatus != PurchaseOrderStatus.RECEIVED) {
             for (PurchaseItem item : po.getPurchaseItems()) { //Many Purchase orders so only used ForEach loop
                 Inventory inventory = item.getInventory();
-                inventory.setCurrentStock(inventory.getCurrentStock() + item.getQuantity());
-                inventoryRepo.save(inventory); // saved to DB
+                if (inventory != null) {
+                    int currentStock = inventory.getCurrentStock() != null ? inventory.getCurrentStock() : 0;
+                    int addedQty = item.getQuantity() != null ? item.getQuantity() : 0;
+                    inventory.setCurrentStock(currentStock + addedQty);
+                    inventoryRepo.save(inventory); // saved to DB
+                }
             }
         }
 
